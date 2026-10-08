@@ -1,0 +1,57 @@
+# Schema of every dataset in data/.
+# Each dataset is one CSV file (UTF-8, comma separated, header on line 1).
+# Multi-valued cells use ";" as separator (example: "BKG;BIL").
+#
+# Column options:
+#   required: true        -> cell cannot be empty
+#   unique: true          -> no two rows share the value
+#   enum: [a, b]          -> allowed values
+#   ref: dataset.column   -> every value must exist in that dataset column
+#   multi: true           -> cell holds a ";" separated list (enum/ref apply to each item)
+
+datasets:
+
+  applications:
+    file: applications.csv
+    title: Applications
+    description: Applications et équipes du SI AirSIGL.
+    key: code
+    columns:
+      code:        {required: true, unique: true}
+      nom:         {required: true, unique: true}
+      type:        {required: true, enum: [metier, transverse]}
+      description: {}
+
+  donnees:
+    file: donnees.csv
+    title: Données
+    description: >
+      Référentiel des données : application propriétaire et mode de propagation
+      (copiée, consultée, transférée) vers les autres applications.
+    key: id
+    columns:
+      id:                {required: true, unique: true}
+      nom:               {required: true, unique: true}
+      categorie:         {required: true, enum: [referentielle, transactionnelle]}
+      portee:            {required: true, enum: [partagee, interne]}
+      app_proprietaire:  {required: true, ref: applications.code}
+      apps_copie:        {multi: true, ref: applications.code}
+      apps_consultation: {multi: true, ref: applications.code}
+      apps_transfert:    {multi: true, ref: applications.code}
+      description:       {}
+
+  flux:
+    file: flux.csv
+    title: Flux
+    description: Référentiel des flux inter-applicatifs.
+    key: id
+    columns:
+      id:           {required: true, unique: true}
+      app_source:   {required: true, ref: applications.code}
+      app_cible:    {required: true, ref: applications.code}
+      donnees:      {multi: true, ref: donnees.id}
+      synchronisme: {required: true, enum: [sync, async]}
+      mode:         {required: true, enum: [push, pull]}
+      initiateur:   {required: true, enum: [source, cible]}
+      scenario:     {}
+      description:  {}

@@ -1,43 +1,34 @@
-# ai-starter-workflow
+# UBSI docs
 
-A lean, spec-driven workflow for building software with Claude: plan anywhere (web, mobile), execute in Claude Code, keep every decision traceable in the repo.
+Single source of documentation for UBSI, the EPITA SIGL enterprise-architecture project that models the information system of AirSIGL, a fictional airline.
 
-> Using this as a template? Replace this README with your project's own once it starts.
+Site: https://basile-de-sousa.github.io/ubsi-docs/
 
-## The idea
+## Layout: data and site are separate
 
-- **The repo is the source of truth.** Decisions never live only in a chat: they land in `docs/` as specs and ADRs.
-- **Chat decides, Claude Code executes.** Planning is cheap conversation; execution only starts on an approved spec.
-- **Lean by default.** No required docs, no placeholders, no framework to install. Files appear only when they have content.
+```
+data/        Source of truth. One CSV per referential + schema.yaml
+docs/        Written content (Markdown): specs, ADRs, guides
+site/        Presentation only: theme overrides + hook that renders data/ into pages
+scripts/     Data loader and validator (used by CI and by the site hook)
+mkdocs.yml   Site config
+```
 
-## The loop
+- Data is **never** written in `docs/` or `site/`. Pages for referentials and applications are generated at build time from `data/` and never committed.
+- Office files (slides, Word deliverables, PDF exports) stay on the project's Google Drive.
+- The repo is public: no personal data (emails, Forge logins, IDs) in `data/`.
 
-1. **Plan (chat, web or mobile).** `/spec new` explores an idea, then writes a `draft` spec in `docs/specs/`. `/spec review` resolves its open questions. You approve: the spec becomes `ready`.
-2. **Execute (Claude Code).** `/spec run NNN` implements one `ready` spec test-first (acceptance tests written and failing before any code), then opens one pull request. `/spec run all` does every `ready` spec in a single pull request.
-3. **Close the loop (chat).** `/spec review` on anything the run sent back: specs returned to `draft`, ADRs `proposed`. You review and merge the PRs.
+## Commands
 
-| Spec status | Meaning |
-|---|---|
-| `draft` | Being discussed, or sent back with an open question |
-| `ready` | Approved by you: the only way execution starts |
-| `in-progress` | Claimed by `/spec run` |
-| `done` | Implemented, pull request opened |
+```bash
+pip install -r requirements.txt
+python scripts/validate.py   # check data/ against data/schema.yaml
+mkdocs serve                 # local preview at http://127.0.0.1:8000
+mkdocs build --strict        # build the site into public/
+```
 
-When the agent must make a decision the spec did not cover, it judges by the cost of being wrong: cheap to undo → noted in the PR; costly with a sensible default → ADR `proposed` for your review; depends on product intent → spec back to `draft` with a question.
+CI runs the validator and a strict build on every pull request, and deploys to GitHub Pages on `main`.
 
-## What's in the repo
+## Workflow
 
-| File | Role |
-|---|---|
-| `CLAUDE.md` | The only always-loaded context: project line, commands, a few non-negotiable rules |
-| `.claude/hooks/board.sh` + `.claude/settings.json` | At session start, lists specs not done and ADRs `proposed` |
-| `docs/specs/`, `docs/adr/` | Created on demand by `/spec` |
-
-Formats and the full workflow live in the **`/spec` skill**, saved at account level on claude.ai (one copy for every project). Spec acceptance criteria use [EARS](https://alistairmavin.com/ears/) notation; ADRs follow a light [MADR](https://adr.github.io/madr/).
-
-## Getting started
-
-1. Create a repo from this template.
-2. Make sure the `/spec` skill is enabled on your Claude account and the GitHub connector can reach the repo. If your local Claude Code CLI does not see the skill, download it into `~/.claude/skills/spec/`.
-3. First Claude Code session: fill the project line and commands in `CLAUDE.md`.
-4. Plan your first feature from the chat with `/spec new`.
+Every change goes through a pull request. Specs (`docs/specs/`) and ADRs (`docs/adr/`) follow the `/spec` workflow: plan in chat with `/spec new` and `/spec review`, implement with `/spec run` in Claude Code. See [ADR-001](docs/adr/001-data-and-site-separation.md) for why the repo is organized this way, and [docs/contribuer.md](docs/contribuer.md) for the contributor guide (French).

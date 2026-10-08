@@ -1,0 +1,55 @@
+site_name: UBSI · Documentation du SI AirSIGL
+site_url: https://basile-de-sousa.github.io/ubsi-docs/
+repo_url: https://github.com/basile-de-sousa/ubsi-docs
+edit_uri: edit/main/docs/
+
+# Written content (markdown). Data pages are generated from data/ by the hook below.
+docs_dir: docs
+site_dir: public
+
+theme:
+  name: material
+  language: fr
+  custom_dir: site/overrides
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - search.highlight
+    - content.action.edit
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      toggle: {icon: material/weather-night, name: Mode sombre}
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      toggle: {icon: material/weather-sunny, name: Mode clair}
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+hooks:
+  - site/hooks/data_pages.py
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc: {permalink: true}
+  - pymdownx.superfences
+
+nav:
+  - Accueil: index.md
+  - Référentiels:
+      - Applications: referentiels/applications.md
+      - Données: referentiels/donnees.md
+      - Flux: referentiels/flux.md
+  - Applications: applications/index.md
+  - Specs: specs/index.md
+  - Décisions (ADR): adr/index.md
+  - Contribuer: contribuer.md
+
+validation:
+  nav:
+    omitted_files: ignore   # per-application pages are reached from applications/index.md

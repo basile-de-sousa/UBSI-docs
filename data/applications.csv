@@ -1,0 +1,11 @@
+code,nom,type,description
+PLA,Planification,metier,Planification de l'offre : tarification et référentiels des vols et des aéroports
+BIL,Billetterie & E-commerce,metier,Site web de vente de billets en ligne
+BKG,Booking,metier,Gestion des places et des passagers
+EMB,Embarquement,metier,Enregistrement en aéroport : bagages et cartes d'embarquement
+SDV,Suivi de vol,metier,Gestion des retards et imprévus et visualisation temps réel des avions
+FID,Fidélité,metier,Programme de fidélité : miles et réductions
+SAV,SAV,metier,Service après-vente
+BI,BI,transverse,Informatique décisionnelle
+SOC,Socle,transverse,Socle technique commun
+OPS,DevOps,transverse,Intégration et déploiement continus
