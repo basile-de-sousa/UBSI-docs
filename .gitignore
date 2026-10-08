@@ -1,5 +1,4 @@
-# MkDocs build output (never committed: the site is rebuilt from data/ and docs/)
-public/
+dist/
 __pycache__/
 .venv/
 .DS_Store

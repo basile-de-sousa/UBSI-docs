@@ -1,5 +1,5 @@
 # ADR-001: Data as CSV in the repo, documentation site generated from it
-Status: proposed - Date: 2026-10-08
+Status: superseded by ADR-002 - Date: 2026-10-08
 
 ## Context
 
