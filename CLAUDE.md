@@ -13,10 +13,9 @@ Project: UBSI documentation hub, EPITA SIGL enterprise-architecture course proje
 - Keep it simple: no website, no generated display of the data. The only build output is the Excel export and the zip in the Release.
 - `data/` holds tabular data as CSV only; Excel files are generated, never committed.
 - The repo is public: never add personal data (emails, Forge logins, student IDs).
-- Code never goes directly to the default branch (or the branch named here): use a `feat/…` or `fix/…` branch and a pull request with passing checks. Docs (`docs/**`, this file) may be committed straight to it.
-- Trivial change (typo, small obvious bug): no spec, just a `fix/…` branch and a pull request.
+- Work directly on `main`: no feature branches, no pull requests. Run the conversion command before pushing.
 - A request that is not a bug fix or a trivial change starts as `/spec new` (explore, then draft spec). No code until a spec is `ready`.
-- Conventional Commits, with the spec reference when there is one: `feat(auth): lock account after 5 failures (SPEC-012)`.
+- Conventional Commits, with the spec reference when there is one: `feat(data): add flux referential (SPEC-012)`.
 - Run the commands above before each commit that touches code. Never weaken a test to make it pass unless the spec changed.
 - If a spec, an ADR and the code disagree, stop and report it. Do not resolve it silently.
 - Specs and ADRs live in `docs/` and follow the `/spec` skill (formats and workflow).

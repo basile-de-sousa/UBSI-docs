@@ -3,14 +3,11 @@ name: Publish downloads
 # On every change to data/ or files/ on main, publish a GitHub Release with:
 #   - each data/*.csv converted to .xlsx, plus UBSI_referentiels.xlsx (one sheet per CSV)
 #   - UBSI_fichiers.zip containing files/
-# On pull requests, only check that the CSVs convert.
 
 on:
   push:
     branches: [main]
     paths: ["data/**", "files/**", "scripts/**", ".github/workflows/release.yml"]
-  pull_request:
-    paths: ["data/**", "scripts/**"]
   workflow_dispatch:
 
 permissions:
@@ -30,13 +27,11 @@ jobs:
       - name: Convert CSV to Excel
         run: python scripts/csv_to_xlsx.py dist
       - name: Zip files/
-        if: github.event_name != 'pull_request'
         run: |
           if [ -n "$(ls -A files 2>/dev/null | grep -v '^.gitkeep$')" ]; then
             zip -rq dist/UBSI_fichiers.zip files -x 'files/.gitkeep'
           fi
       - name: Publish release
-        if: github.event_name != 'pull_request'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |

@@ -31,8 +31,8 @@ scripts/   Conversion CSV → Excel
 ## Modifier
 
 1. Modifiez un CSV dans `data/` ou ajoutez un fichier dans `files/` (sur GitHub : *Add file > Upload files*).
-2. Ouvrez une pull request. La conversion Excel est vérifiée automatiquement.
-3. Une fois la PR fusionnée, une nouvelle Release est publiée en quelques minutes.
+2. Commitez directement sur `main`.
+3. Une nouvelle Release est publiée en quelques minutes. Si un CSV est mal formé, la publication échoue (croix rouge sur le commit) et la Release précédente reste en ligne.
 
 CSV depuis Excel : *Enregistrer sous > CSV UTF-8*. Les séparateurs `,` et `;` sont acceptés tous les deux.
 
