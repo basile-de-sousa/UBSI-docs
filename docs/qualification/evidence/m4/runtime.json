@@ -1,0 +1,100 @@
+{
+  "environment": "ubsi-portal-m2-preview",
+  "migrations": 25,
+  "accounts": 2,
+  "records": 19,
+  "revisions": 23,
+  "drafts": 10,
+  "active_sprint": "SPRINT-002",
+  "active_sprint_count": 1,
+  "closure_count": 1,
+  "snapshots": [
+    {
+      "sprint": "SPRINT-001",
+      "source_revision": 2,
+      "closed_revision": 3,
+      "request_version": 3,
+      "rows": [
+        {
+          "reference": "US-001",
+          "title": "Consulter les d\u00e9cisions publi\u00e9es",
+          "work_state": "in_progress",
+          "source_story_revision": 2,
+          "applications": [
+            "BIL2"
+          ]
+        },
+        {
+          "reference": "US-002",
+          "title": "Retrouver les r\u00e8gles de planification",
+          "work_state": "ready",
+          "source_story_revision": 2,
+          "applications": [
+            "PLA"
+          ]
+        },
+        {
+          "reference": "US-003",
+          "title": "Consulter les r\u00e9ponses communes",
+          "work_state": "done",
+          "source_story_revision": 1,
+          "applications": [
+            "PLA",
+            "BIL2"
+          ]
+        }
+      ]
+    }
+  ],
+  "current_stories": [
+    {
+      "reference": "US-001",
+      "state": "published",
+      "title": "Consulter les d\u00e9cisions publi\u00e9es \u2014 parcours consolid\u00e9",
+      "revision": 4,
+      "work_state": "done",
+      "responsible_role": "user",
+      "sprint": [
+        "SPRINT-002"
+      ]
+    },
+    {
+      "reference": "US-002",
+      "state": "published",
+      "title": "Retrouver les r\u00e8gles de planification",
+      "revision": 3,
+      "work_state": "backlog",
+      "responsible_role": "user",
+      "sprint": []
+    },
+    {
+      "reference": "US-003",
+      "state": "archived",
+      "title": "Consulter les r\u00e9ponses communes",
+      "revision": 2,
+      "work_state": "done",
+      "responsible_role": "user",
+      "sprint": []
+    }
+  ],
+  "passages": 9,
+  "noncurrent_passages": 0,
+  "withdrawn_passages": 0,
+  "jobs": [
+    {
+      "state": "superseded",
+      "count": 10
+    },
+    {
+      "state": "pending",
+      "count": 5
+    }
+  ],
+  "search_generation": 25,
+  "snapshot_triggers": [
+    "sprint_active_pointer",
+    "sprint_application_immutable",
+    "sprint_closure_immutable",
+    "sprint_row_immutable"
+  ]
+}

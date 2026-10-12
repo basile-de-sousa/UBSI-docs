@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="entry-page">
+  <header class="entry-header">
+    <a class="brand brand-dark" href="{% url 'entry' %}"><span class="brand-mark">U</span><span>UBSI<span class="brand-caption">PORTAIL PROJET</span></span></a>
+    <span class="private-label">{% include 'components/icon.html' with name='lock' %} Espace privé</span>
+  </header>
+  <main id="main" class="entry-main auth-main" tabindex="-1">
+    <div class="entry-copy">
+      <p class="eyebrow">UNE MÉMOIRE COMMUNE</p>
+      <h1>Tout le projet.<br>Un même endroit.</h1>
+      <p class="entry-description">Les applications, les décisions et les documents UBSI, réunis pour avancer ensemble.</p>
+      <div class="entry-topics"><span>Applications</span><span>Epics & user stories</span><span>Spécifications</span><span>Documents & FAQ</span></div>
+    </div>
+    <section class="access-card auth-card" aria-labelledby="auth-title">
+      {% include 'components/messages.html' %}
+      {% block auth_content %}{% endblock %}
+    </section>
+  </main>
+  <footer class="entry-footer"><span>UBSI · La connaissance au service du projet</span><span>Accès réservé aux membres invités</span></footer>
+</div>
+{% endblock %}

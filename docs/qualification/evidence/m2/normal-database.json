@@ -1,0 +1,6 @@
+{
+  "environment": "normal development database, separate from ubsi-portal-m2-preview",
+  "account_count": 0,
+  "control_rows": 1,
+  "migration_count": 18
+}

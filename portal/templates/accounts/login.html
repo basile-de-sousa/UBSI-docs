@@ -1,0 +1,15 @@
+{% extends 'accounts/auth_base.html' %}
+{% block title %}Connexion{% endblock %}
+{% block auth_content %}
+<div class="access-icon">{% include 'components/icon.html' with name='lock' %}</div>
+<p class="eyebrow">BIENVENUE SUR LE PORTAIL</p>
+<h2 id="auth-title">Retrouvons le projet.</h2>
+<p>Connectez-vous avec votre compte UBSI.</p>
+<form method="post" action="{% url 'login' %}" class="auth-form">
+  {% csrf_token %}<input type="hidden" name="next" value="{{ next }}">
+  {% include 'components/fields.html' %}
+  <button class="button button-primary" type="submit">Se connecter {% include 'components/icon.html' with name='arrow' %}</button>
+</form>
+<a class="auth-link" href="{% url 'recovery' %}">Mot de passe oublié ?</a>
+<div class="access-note"><p>Pas encore de compte ? Demandez une invitation à un administrateur du projet.</p></div>
+{% endblock %}

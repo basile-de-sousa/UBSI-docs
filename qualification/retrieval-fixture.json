@@ -1,0 +1,525 @@
+{
+  "synthetic": true,
+  "sources": [
+    {
+      "id": "invite",
+      "kind": "faq",
+      "title": "Comment obtenir un compte ?",
+      "text": "Seul un administrateur peut inviter un membre par email. Le destinataire choisit son mot de passe en ouvrant le lien d'invitation.",
+      "state": "published",
+      "revision": 1,
+      "current_revision": 1
+    },
+    {
+      "id": "password",
+      "kind": "faq",
+      "title": "Mot de passe oublié",
+      "text": "Le lien Mot de passe oublié sur la page de connexion permet de demander un email de récupération. Le lien est à usage unique et expire après une heure.",
+      "state": "published",
+      "revision": 1,
+      "current_revision": 1
+    },
+    {
+      "id": "draft",
+      "kind": "spec",
+      "title": "Publication des modifications",
+      "text": "Enregistrer un brouillon ne modifie pas la page publiée. Un administrateur doit cliquer sur Publier pour rendre ses changements visibles aux lecteurs.",
+      "state": "published",
+      "revision": 1,
+      "current_revision": 1
+    },
+    {
+      "id": "carry",
+      "kind": "story",
+      "title": "Clôturer les travaux inachevés",
+      "text": "Lors de la clôture d'un sprint, les stories inachevées sont explicitement remises dans le backlog ou reportées dans un sprint planifié. Le choix est conservé dans l'historique.",
+      "state": "published",
+      "revision": 1,
+      "current_revision": 1
+    },
+    {
+      "id": "original",
+      "kind": "spec",
+      "title": "Téléchargement des documents",
+      "text": "Le bouton Télécharger l'original fournit le fichier importé sans en modifier les octets. L'aperçu est un fichier dérivé distinct.",
+      "state": "published",
+      "revision": 1,
+      "current_revision": 1
+    },
+    {
+      "id": "formula",
+      "kind": "faq",
+      "title": "Formule sans résultat enregistré",
+      "text": "L'aperçu Excel lit les résultats enregistrés sans recalculer les formules. Si un résultat manque, ouvrir le classeur dans Excel, le recalculer, l'enregistrer puis le réimporter.",
+      "state": "published",
+      "revision": 1,
+      "current_revision": 1
+    },
+    {
+      "id": "archive",
+      "kind": "spec",
+      "title": "Archivage des contenus",
+      "text": "Un contenu archivé disparaît de la consultation et de la recherche des lecteurs. Les administrateurs conservent son historique et peuvent restaurer une ancienne version en brouillon.",
+      "state": "published",
+      "revision": 1,
+      "current_revision": 1
+    },
+    {
+      "id": "epic",
+      "kind": "epic",
+      "title": "Epics transverses",
+      "text": "Un epic peut concerner plusieurs applications. Chaque user story appartient à un seul epic et indique un sous-ensemble des applications de cet epic.",
+      "state": "published",
+      "revision": 1,
+      "current_revision": 1
+    },
+    {
+      "id": "editor",
+      "kind": "spec",
+      "title": "Rédaction des spécifications",
+      "text": "Les spécifications utilisent un éditeur visuel avec titres, listes, tableaux, liens et blocs de code. Les administrateurs rédigent ces pages directement dans le site.",
+      "state": "published",
+      "revision": 1,
+      "current_revision": 1
+    },
+    {
+      "id": "reader",
+      "kind": "faq",
+      "title": "Droits des lecteurs",
+      "text": "Un membre avec le rôle utilisateur lit les contenus publiés et utilise le chatbot. Seuls les administrateurs peuvent créer, modifier et publier des contenus.",
+      "state": "published",
+      "revision": 1,
+      "current_revision": 1
+    },
+    {
+      "id": "urbanists",
+      "kind": "faq",
+      "title": "Question sans réponse",
+      "text": "Si aucune réponse adaptée n'est trouvée, le chatbot affiche : Aucune réponse adaptée n'a été trouvée. Allez en parler aux urbanistes.",
+      "state": "published",
+      "revision": 1,
+      "current_revision": 1
+    },
+    {
+      "id": "pages",
+      "kind": "spec",
+      "title": "Consulter les diagrammes PDF",
+      "text": "Un document PDF peut comporter plusieurs pages. L'aperçu permet de passer d'une page à l'autre et de zoomer sans quitter le site.",
+      "state": "published",
+      "revision": 1,
+      "current_revision": 1
+    },
+    {
+      "id": "history",
+      "kind": "spec",
+      "title": "Anciennes versions",
+      "text": "Les administrateurs consultent l'historique des versions publiées et restaurent une version dans un brouillon. Les lecteurs voient seulement la version actuellement publiée.",
+      "state": "published",
+      "revision": 1,
+      "current_revision": 1
+    },
+    {
+      "id": "hidden",
+      "kind": "faq",
+      "title": "Feuilles masquées Excel",
+      "text": "Les feuilles masquées du classeur sont consultables dans l'aperçu avec une indication Masquée. Tous les onglets restent accessibles dans le sélecteur de feuilles.",
+      "state": "published",
+      "revision": 1,
+      "current_revision": 1
+    },
+    {
+      "id": "failure",
+      "kind": "spec",
+      "title": "Remplacement de fichier en échec",
+      "text": "Une nouvelle révision de fichier ne peut pas être publiée si son aperçu a échoué. La version précédemment publiée reste disponible pendant la correction du remplacement.",
+      "state": "published",
+      "revision": 1,
+      "current_revision": 1
+    },
+    {
+      "id": "one-sprint",
+      "kind": "spec",
+      "title": "Sprint actif",
+      "text": "Les sprints sont communs au projet. Un seul sprint peut être actif à un instant donné. L'activation d'un deuxième sprint est refusée tant que le premier reste actif.",
+      "state": "published",
+      "revision": 1,
+      "current_revision": 1
+    },
+    {
+      "id": "drawio",
+      "kind": "spec",
+      "title": "Diagrammes draw.io",
+      "text": "Les administrateurs importent les fichiers draw.io. Les lecteurs consultent les pages du diagramme et le téléchargent. La modification du dessin se fait dans un outil externe.",
+      "state": "published",
+      "revision": 1,
+      "current_revision": 1
+    },
+    {
+      "id": "cross",
+      "kind": "epic",
+      "title": "Sprints et applications",
+      "text": "Un sprint commun peut regrouper des user stories de plusieurs applications. Le filtre Application aide à retrouver les stories concernées sans créer de sprint séparé.",
+      "state": "published",
+      "revision": 1,
+      "current_revision": 1
+    },
+    {
+      "id": "conflict-a",
+      "kind": "faq",
+      "title": "Suppression des comptes DEMO",
+      "text": "Les comptes DEMO doivent être supprimés après trente jours.",
+      "state": "published",
+      "revision": 1,
+      "current_revision": 1
+    },
+    {
+      "id": "conflict-b",
+      "kind": "spec",
+      "title": "Suppression des comptes DEMO",
+      "text": "Les comptes DEMO ne doivent pas être supprimés après trente jours.",
+      "state": "published",
+      "revision": 1,
+      "current_revision": 1
+    },
+    {
+      "id": "private-draft",
+      "kind": "spec",
+      "title": "Code de secours DEMO-DRAFT",
+      "text": "Le code de secours DEMO-DRAFT est FICTIF-123.",
+      "state": "draft",
+      "revision": 1,
+      "current_revision": null
+    },
+    {
+      "id": "archive-only",
+      "kind": "faq",
+      "title": "Mot de contrôle DEMO-ARCHIVE",
+      "text": "Le mot de contrôle DEMO-ARCHIVE est FICTIF-456.",
+      "state": "archived",
+      "revision": 1,
+      "current_revision": 1
+    },
+    {
+      "id": "file",
+      "kind": "document",
+      "title": "Facture DEMO-FILE",
+      "text": "La facture DEMO-FILE indique 123 euros fictifs.",
+      "state": "published",
+      "revision": 1,
+      "current_revision": 1
+    },
+    {
+      "id": "stale",
+      "kind": "faq",
+      "title": "Mot de passe oublié",
+      "text": "Les anciens liens expirent après dix jours. Cette version est obsolète.",
+      "state": "published",
+      "revision": 1,
+      "current_revision": 2
+    }
+  ],
+  "calibration": [
+    {
+      "question": "Qui peut m'envoyer une invitation pour rejoindre le portail ?",
+      "expected": "invite",
+      "category": "answerable"
+    },
+    {
+      "question": "J'ai perdu mon mot de passe, que dois-je faire ?",
+      "expected": "password",
+      "category": "answerable"
+    },
+    {
+      "question": "Un brouillon enregistré est-il immédiatement visible par l'équipe ?",
+      "expected": "draft",
+      "category": "answerable"
+    },
+    {
+      "question": "Que faire des stories non terminées quand on clôture un sprint ?",
+      "expected": "carry",
+      "category": "answerable"
+    },
+    {
+      "question": "Puis-je récupérer le fichier exactement comme il a été importé ?",
+      "expected": "original",
+      "category": "answerable"
+    },
+    {
+      "question": "Pourquoi mon aperçu affiche-t-il Résultat non disponible pour une formule ?",
+      "expected": "formula",
+      "category": "answerable"
+    },
+    {
+      "question": "Les lecteurs peuvent-ils encore consulter un contenu archivé ?",
+      "expected": "archive",
+      "category": "answerable"
+    },
+    {
+      "question": "Un epic peut-il couvrir deux applications différentes ?",
+      "expected": "epic",
+      "category": "answerable"
+    },
+    {
+      "question": "Comment insérer un tableau dans une spécification ?",
+      "expected": "editor",
+      "category": "answerable"
+    },
+    {
+      "question": "Avec un rôle utilisateur, puis-je modifier une user story ?",
+      "expected": "reader",
+      "category": "answerable"
+    },
+    {
+      "question": "À qui m'adresser lorsque le chatbot ne trouve aucune réponse ?",
+      "expected": "urbanists",
+      "category": "answerable"
+    },
+    {
+      "question": "Comment lire la deuxième page d'un PDF sur le portail ?",
+      "expected": "pages",
+      "category": "answerable"
+    },
+    {
+      "question": "Qui peut consulter les anciennes versions des specs ?",
+      "expected": "history",
+      "category": "answerable"
+    },
+    {
+      "question": "Où retrouver les onglets masqués d'un classeur ?",
+      "expected": "hidden",
+      "category": "answerable"
+    },
+    {
+      "question": "Si l'aperçu du nouveau fichier échoue, que voient les lecteurs ?",
+      "expected": "failure",
+      "category": "answerable"
+    },
+    {
+      "question": "Peut-on avoir deux sprints actifs en même temps ?",
+      "expected": "one-sprint",
+      "category": "answerable"
+    },
+    {
+      "question": "Peut-on éditer directement un dessin draw.io dans le portail ?",
+      "expected": "drawio",
+      "category": "answerable"
+    },
+    {
+      "question": "Un sprint peut-il regrouper des stories de plusieurs applications ?",
+      "expected": "cross",
+      "category": "answerable"
+    },
+    {
+      "question": "Quel temps fera-t-il demain à Lyon ?",
+      "expected": null,
+      "category": "unknown"
+    },
+    {
+      "question": "Quel restaurant choisir ce soir ?",
+      "expected": null,
+      "category": "unknown"
+    },
+    {
+      "question": "Quel est le budget annuel du projet ?",
+      "expected": null,
+      "category": "unknown"
+    },
+    {
+      "question": "Quelle est l'adresse SMTP de l'hébergement ?",
+      "expected": null,
+      "category": "unknown"
+    },
+    {
+      "question": "Quelle formule calcule la taxe sur les billets ?",
+      "expected": null,
+      "category": "keyword_overlap"
+    },
+    {
+      "question": "Quel epic couvre le remboursement des billets ?",
+      "expected": null,
+      "category": "keyword_overlap"
+    },
+    {
+      "question": "Combien de jours dure notre prochain sprint ?",
+      "expected": null,
+      "category": "keyword_overlap"
+    },
+    {
+      "question": "Quel est le délai de suppression des comptes DEMO ?",
+      "expected": null,
+      "category": "conflict"
+    },
+    {
+      "question": "Les comptes DEMO doivent-ils être supprimés au bout de trente jours ?",
+      "expected": null,
+      "category": "conflict"
+    },
+    {
+      "question": "Quel est le code de secours DEMO-DRAFT ?",
+      "expected": null,
+      "category": "draft_only"
+    },
+    {
+      "question": "Quel est le mot de contrôle DEMO-ARCHIVE ?",
+      "expected": null,
+      "category": "archived_only"
+    },
+    {
+      "question": "Quel est le montant de la facture DEMO-FILE ?",
+      "expected": null,
+      "category": "file_only"
+    }
+  ],
+  "held_out": [
+    {
+      "question": "Je rejoins l'équipe : comment ouvrir mon accès au site ?",
+      "expected": "invite",
+      "category": "answerable"
+    },
+    {
+      "question": "Je ne me souviens plus de mon secret de connexion : comment le remplacer ?",
+      "expected": "password",
+      "category": "answerable"
+    },
+    {
+      "question": "J'ai sauvegardé une correction, pourquoi les membres voient-ils encore l'ancien texte ?",
+      "expected": "draft",
+      "category": "answerable"
+    },
+    {
+      "question": "Une tâche reste en cours à la fin de l'itération : où la placer ?",
+      "expected": "carry",
+      "category": "answerable"
+    },
+    {
+      "question": "Le téléchargement conserve-t-il le document source intact ?",
+      "expected": "original",
+      "category": "answerable"
+    },
+    {
+      "question": "Comment faire apparaître le total calculé manquant dans le classeur importé ?",
+      "expected": "formula",
+      "category": "answerable"
+    },
+    {
+      "question": "Que devient une page dans la recherche quand un admin l'archive ?",
+      "expected": "archive",
+      "category": "answerable"
+    },
+    {
+      "question": "Peut-on rattacher un même besoin majeur à plusieurs applications ?",
+      "expected": "epic",
+      "category": "answerable"
+    },
+    {
+      "question": "Quel outil permet de structurer une page de spec avec titres et code ?",
+      "expected": "editor",
+      "category": "answerable"
+    },
+    {
+      "question": "Mon compte de lecteur permet-il de créer un epic ?",
+      "expected": "reader",
+      "category": "answerable"
+    },
+    {
+      "question": "Que m'indique l'assistant lorsqu'il n'a pas de réponse dans les pages ?",
+      "expected": "urbanists",
+      "category": "answerable"
+    },
+    {
+      "question": "Peut-on parcourir toutes les pages d'un diagramme PDF dans le site ?",
+      "expected": "pages",
+      "category": "answerable"
+    },
+    {
+      "question": "Comment un admin reprend-il une ancienne version sans la publier immédiatement ?",
+      "expected": "history",
+      "category": "answerable"
+    },
+    {
+      "question": "Une feuille cachée dans Excel est-elle consultable sur le site ?",
+      "expected": "hidden",
+      "category": "answerable"
+    },
+    {
+      "question": "L'ancien document reste-t-il lisible quand son remplacement est invalide ?",
+      "expected": "failure",
+      "category": "answerable"
+    },
+    {
+      "question": "Combien d'itérations peut-on démarrer simultanément dans le projet ?",
+      "expected": "one-sprint",
+      "category": "answerable"
+    },
+    {
+      "question": "Faut-il retourner dans draw.io pour modifier le diagramme importé ?",
+      "expected": "drawio",
+      "category": "answerable"
+    },
+    {
+      "question": "Comment voir les tâches d'une application dans une itération transverse ?",
+      "expected": "cross",
+      "category": "answerable"
+    },
+    {
+      "question": "Va-t-il pleuvoir à Paris demain ?",
+      "expected": null,
+      "category": "unknown"
+    },
+    {
+      "question": "Où réserver un repas pour vendredi ?",
+      "expected": null,
+      "category": "unknown"
+    },
+    {
+      "question": "Combien coûte le projet UBSI cette année ?",
+      "expected": null,
+      "category": "unknown"
+    },
+    {
+      "question": "Quel serveur de messagerie doit-on configurer ?",
+      "expected": null,
+      "category": "unknown"
+    },
+    {
+      "question": "Quel taux de TVA utiliser dans mon tableau Excel ?",
+      "expected": null,
+      "category": "keyword_overlap"
+    },
+    {
+      "question": "Quelle story détaille les bagages perdus ?",
+      "expected": null,
+      "category": "keyword_overlap"
+    },
+    {
+      "question": "Quelle est la date du prochain démarrage de sprint ?",
+      "expected": null,
+      "category": "keyword_overlap"
+    },
+    {
+      "question": "Après combien de jours efface-t-on les comptes DEMO ?",
+      "expected": null,
+      "category": "conflict"
+    },
+    {
+      "question": "Est-il interdit d'effacer les comptes DEMO après trente jours ?",
+      "expected": null,
+      "category": "conflict"
+    },
+    {
+      "question": "Où trouver le code de secours du brouillon DEMO-DRAFT ?",
+      "expected": null,
+      "category": "draft_only"
+    },
+    {
+      "question": "Quel mot de contrôle était dans DEMO-ARCHIVE ?",
+      "expected": null,
+      "category": "archived_only"
+    },
+    {
+      "question": "Combien indique la facture importée DEMO-FILE ?",
+      "expected": null,
+      "category": "file_only"
+    }
+  ]
+}

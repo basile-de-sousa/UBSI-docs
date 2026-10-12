@@ -1,0 +1,6 @@
+{% extends 'workspace.html' %}
+{% block content %}
+<div class="page-title-row"><div><p class="eyebrow">TROUVER UNE RÉPONSE EXISTANTE</p><h1>Assistant FAQ<span class="title-dot">.</span></h1><p class="page-description">Les connaissances publiées, avec un lien vers leur source.</p></div><a href="{% url 'faq' %}" class="button button-secondary">Parcourir la FAQ</a></div>
+{% if not qualified %}<div class="message qualification-note" role="status"><strong>Assistant en cours de qualification</strong><p>La pertinence des réponses doit encore être validée par les urbanistes. La FAQ et la recherche restent disponibles.</p><a href="{% url 'search' %}" class="subtle-link">Rechercher dans les contenus →</a></div>{% endif %}
+{% include 'search/chat.html' %}
+{% endblock %}

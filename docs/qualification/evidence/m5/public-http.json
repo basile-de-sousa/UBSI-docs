@@ -1,0 +1,92 @@
+[
+  {
+    "path": "/health/live/",
+    "status": 200,
+    "location": null,
+    "cache_control": "no-store, private",
+    "csp": "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'none'; object-src 'none'; frame-src 'self'; frame-ancestors 'none'; form-action 'self'",
+    "content_type": "application/json",
+    "cors": null
+  },
+  {
+    "path": "/health/ready/",
+    "status": 200,
+    "location": null,
+    "cache_control": "no-store, private",
+    "csp": "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'none'; object-src 'none'; frame-src 'self'; frame-ancestors 'none'; form-action 'self'",
+    "content_type": "application/json",
+    "cors": null
+  },
+  {
+    "path": "/documents/",
+    "status": 302,
+    "location": "/auth/login/",
+    "cache_control": "no-store, private",
+    "csp": "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'none'; object-src 'none'; frame-src 'self'; frame-ancestors 'none'; form-action 'self'",
+    "content_type": "text/html; charset=utf-8",
+    "cors": null
+  },
+  {
+    "path": "/documents/7f831cbd-a4e1-421d-b2bc-2647ffd149d0/preview/",
+    "status": 302,
+    "location": "/auth/login/",
+    "cache_control": "no-store, private",
+    "csp": "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'none'; object-src 'none'; frame-src 'self'; frame-ancestors 'none'; form-action 'self'",
+    "content_type": "text/html; charset=utf-8",
+    "cors": null
+  },
+  {
+    "path": "/documents/7f831cbd-a4e1-421d-b2bc-2647ffd149d0/download/",
+    "status": 302,
+    "location": "/auth/login/",
+    "cache_control": "no-store, private",
+    "csp": "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'none'; object-src 'none'; frame-src 'self'; frame-ancestors 'none'; form-action 'self'",
+    "content_type": "text/html; charset=utf-8",
+    "cors": null
+  },
+  {
+    "path": "/documents/f8541c8e-2b67-40bc-a964-3289ad52a604/frame/",
+    "status": 302,
+    "location": "/auth/login/",
+    "cache_control": "no-store, private",
+    "csp": "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'none'; object-src 'none'; frame-src 'self'; frame-ancestors 'none'; form-action 'self'",
+    "content_type": "text/html; charset=utf-8",
+    "cors": null
+  },
+  {
+    "path": "/documents/7f831cbd-a4e1-421d-b2bc-2647ffd149d0/status/",
+    "status": 401,
+    "location": null,
+    "cache_control": "no-store, private",
+    "csp": "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'none'; object-src 'none'; frame-src 'self'; frame-ancestors 'none'; form-action 'self'",
+    "content_type": "application/json",
+    "cors": null
+  },
+  {
+    "path": "/documents/7f831cbd-a4e1-421d-b2bc-2647ffd149d0/asset/sheet-0-0.json/",
+    "status": 401,
+    "location": null,
+    "cache_control": "no-store, private",
+    "csp": "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'none'; object-src 'none'; frame-src 'self'; frame-ancestors 'none'; form-action 'self'",
+    "content_type": "application/json",
+    "cors": null
+  },
+  {
+    "path": "/admin/documents/0f00d33b-e6ed-4541-844b-33815042c0e6/revisions/1/download/",
+    "status": 302,
+    "location": "/auth/login/",
+    "cache_control": "no-store, private",
+    "csp": "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'none'; object-src 'none'; frame-src 'self'; frame-ancestors 'none'; form-action 'self'",
+    "content_type": "text/html; charset=utf-8",
+    "cors": null
+  },
+  {
+    "path": "/static/vendor/pdfjs/build/pdf.mjs",
+    "status": 200,
+    "location": null,
+    "cache_control": "max-age=60, public",
+    "csp": null,
+    "content_type": "text/javascript; charset=\"utf-8\"",
+    "cors": "*"
+  }
+]

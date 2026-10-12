@@ -1,0 +1,28 @@
+{
+  "database_version": "17.11 (Debian 17.11-1.pgdg12+2)",
+  "migration_count": 18,
+  "control_rows": 1,
+  "debug": false,
+  "accounts": [
+    {
+      "display_name": "Administrateur local",
+      "role": "admin",
+      "active": true,
+      "access_version": 1,
+      "management_version": 1
+    },
+    {
+      "display_name": "Lecteur local",
+      "role": "user",
+      "active": true,
+      "access_version": 2,
+      "management_version": 5
+    }
+  ],
+  "invitation_count": 1,
+  "consumed_invitations": 1,
+  "failed_delivery_invitation_exists": false,
+  "failed_delivery_user_exists": false,
+  "future_provider_identity_count": 0,
+  "private_storage_mode": "0o700"
+}

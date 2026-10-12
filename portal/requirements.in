@@ -1,0 +1,18 @@
+# Runtime dependencies only; the root CSV export remains independent.
+Django==5.2.17
+psycopg[binary]==3.3.6
+argon2-cffi==25.1.0
+gunicorn==26.2.0
+whitenoise==6.12.0
+
+# M0-qualified document adapters.
+openpyxl==3.1.5
+pypdf==6.20.0
+pillow==12.3.0
+CairoSVG==2.9.1
+defusedxml==0.7.1
+
+# Offline M6 retrieval; CPU wheels are resolved in requirements.lock.
+sentence-transformers==6.1.0
+torch==2.14.1
+numpy==2.5.4

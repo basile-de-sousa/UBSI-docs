@@ -1,0 +1,62 @@
+{
+  "scope": "Manual fictional browser observations; no automated test suite",
+  "desktopWidthsObserved": [
+    1280,
+    1072
+  ],
+  "compactWidthObserved": 747,
+  "mobileTable": {
+    "containerWidth": 314,
+    "pageWidth": 390,
+    "scrollLeft": 40,
+    "scrollWidth": 578,
+    "viewportWidth": 390
+  },
+  "mobileDiagram": {
+    "pageWidth": 390,
+    "viewportWidth": 390
+  },
+  "mobileMenuNavigation": true,
+  "drawioIsolation": {
+    "parentAccess": "blocked",
+    "messageOrigin": "null"
+  },
+  "pdfIsolation": {
+    "parentAccess": "blocked",
+    "messageOrigin": "null"
+  },
+  "imageDimensions": [
+    {
+      "source": "DOC-010 Schéma JPG",
+      "height": 160,
+      "width": 520
+    },
+    {
+      "source": "DOC-011 Schéma JPEG",
+      "height": 160,
+      "width": 520
+    },
+    {
+      "source": "DOC-012 Schéma SVG",
+      "height": 220,
+      "width": 720
+    }
+  ],
+  "readerAdminLinks": 0,
+  "categorySpreadsheetResults": 3,
+  "formulaCaches": {
+    "B3": "3",
+    "B4": "genuine empty",
+    "B5": "missing result",
+    "B6": "missing numeric result"
+  },
+  "hiddenSheetVisible": true,
+  "csvSecondPageFirstRow": 101,
+  "csvOriginalV1AdminHistoryRetained": true,
+  "restoredV1DraftLeavesV2Published": true,
+  "staleCurrentDownloadUnavailable": true,
+  "historicalDownloadDeniedToReader": true,
+  "archivedDocumentUnavailable": true,
+  "errors": [],
+  "expectedWarning": "PDF.js Setting up fake worker"
+}

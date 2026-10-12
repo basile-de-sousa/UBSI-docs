@@ -1,0 +1,9 @@
+{
+  "note": "Template only: cannot activate readers. Keep the completed report private. Use actual reviewed destinations and observed returned cards, including every retained M0 regression. Never set approval or lifecycle flags without evidence.",
+  "policy_sha256": "copy-from-manage-py-search_status-after-policy-freeze",
+  "review": {"role": "urbanist", "date": "", "expectations_approved": false},
+  "policy_frozen_before_holdout": false,
+  "lifecycle_checks_passed": false,
+  "groups": {"calibration": [], "held_out": [], "m0_regressions": []},
+  "case_schema": {"id": "unique-case-id", "expected": ["record-reference#section-anchor"], "returned": [], "status": "no_answer", "private_or_stale": false}
+}

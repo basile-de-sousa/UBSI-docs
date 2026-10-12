@@ -1,0 +1,10 @@
+Found 49 test(s).
+Creating test database for alias 'default'...
+System check identified no issues (0 silenced).
+....................portal.csrf_rejected.missing_cookie
+.....................ssss....
+----------------------------------------------------------------------
+Ran 49 tests in 22.916s
+
+OK (skipped=4)
+Destroying test database for alias 'default'...

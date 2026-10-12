@@ -1,0 +1,2 @@
+{% extends 'workspace.html' %}
+{% block content %}<div class="detail-navigation"><a href="{% if admin_preview %}{% url 'knowledge-edit' record.pk %}{% else %}/documents/{{ record.pk }}/{% endif %}">← Revenir au document</a></div><header class="detail-heading"><p class="eyebrow">{{ record.reference }}{% if admin_preview %} · APERÇU ADMINISTRATEUR{% endif %}</p><h1>{{ revision.title }}</h1>{% if admin_preview %}<p>Document privé ou historique ; cet aperçu ne publie rien.</p>{% endif %}</header>{% include 'documents/viewer.html' %}{% endblock %}

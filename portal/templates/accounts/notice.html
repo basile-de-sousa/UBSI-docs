@@ -1,0 +1,10 @@
+{% extends 'accounts/auth_base.html' %}
+{% block title %}{{ heading }}{% endblock %}
+{% block auth_content %}
+<div class="access-icon">{% include 'components/icon.html' with name='help' %}</div>
+<h2 id="auth-title">{{ heading }}</h2>
+<p>{{ description }}</p>
+{% if retry_after %}<p class="retry-note">Vous pourrez réessayer dans {{ retry_after }} secondes.</p>{% endif %}
+{% if recovery_link %}<a class="button button-primary" href="{% url 'recovery' %}">Demander un nouveau lien</a>{% endif %}
+<a class="auth-link" href="{% url 'login' %}">Revenir à la connexion</a>
+{% endblock %}

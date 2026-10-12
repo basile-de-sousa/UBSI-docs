@@ -1,0 +1,4 @@
+web-1  | accounts.mail_delivery_failed
+web-1  | accounts.mail_transport_unavailable
+web-1  | accounts.mail_transport_unavailable
+web-1  | portal.csrf_rejected.missing_cookie

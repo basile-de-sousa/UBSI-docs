@@ -1,0 +1,27 @@
+{
+  "projects": {
+    "ubsi-portal-m2-preview": {
+      "running_containers": 0
+    },
+    "ubsi-restore-m7": {
+      "running_containers": 0
+    },
+    "ubsi-restore-m7-final": {
+      "running_containers": 0
+    },
+    "ubsi-restore-m7-release": {
+      "running_containers": 0
+    },
+    "ubsi-restore-m7-delivery": {
+      "running_containers": 0
+    },
+    "ubsi-portal": {
+      "running_containers": 0
+    }
+  },
+  "volumes_retained": true,
+  "browser_tab_closed": true,
+  "fictional_reader_logged_out": true,
+  "viewport_reset": true,
+  "production_started": false
+}

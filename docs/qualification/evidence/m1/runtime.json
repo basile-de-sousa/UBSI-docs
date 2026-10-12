@@ -1,0 +1,33 @@
+{
+  "python": "3.12.14",
+  "django": "5.2.17",
+  "platform": "Linux aarch64",
+  "uid": 10001,
+  "postgresql": "17.11 (Debian 17.11-1.pgdg12+2)",
+  "pending_migrations": 0,
+  "applied_migrations": 16,
+  "accounts_created": 0,
+  "private_directory_mode": "0o700",
+  "assets": {
+    "script": "assets/main-BrnVo1rr.js",
+    "styles": [
+      "assets/main-BQgXEHqd.css"
+    ]
+  },
+  "routes": {
+    "/health/live/": {
+      "status": 200,
+      "body": {
+        "status": "ok"
+      },
+      "cache_control": "no-store, private"
+    },
+    "/health/ready/": {
+      "status": 200,
+      "body": {
+        "status": "ok"
+      },
+      "cache_control": "no-store, private"
+    }
+  }
+}

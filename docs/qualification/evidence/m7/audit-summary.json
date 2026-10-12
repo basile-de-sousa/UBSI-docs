@@ -1,0 +1,21 @@
+{
+  "ok": true,
+  "migrations": 30,
+  "counts": {
+    "accounts": 2,
+    "records": 35,
+    "revisions": 40,
+    "files": 25,
+    "passages": 11
+  },
+  "jobs": {
+    "pending": 0,
+    "running": 0,
+    "expired_leases": 0,
+    "failed": 5,
+    "oldest_pending_seconds": null
+  },
+  "chatbot_qualified": false,
+  "errors": [],
+  "fingerprinted_tables": 32
+}

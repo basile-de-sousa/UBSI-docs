@@ -1,0 +1,98 @@
+[
+  {
+    "reference": "DOC-001",
+    "filename": "synthetic.xlsx",
+    "state": "ready",
+    "code": ""
+  },
+  {
+    "reference": "DOC-002",
+    "filename": "synthetic.drawio",
+    "state": "ready",
+    "code": ""
+  },
+  {
+    "reference": "DOC-003",
+    "filename": "synthetic.xml",
+    "state": "ready",
+    "code": ""
+  },
+  {
+    "reference": "DOC-004",
+    "filename": "synthetic.csv",
+    "state": "ready",
+    "code": ""
+  },
+  {
+    "reference": "DOC-005",
+    "filename": "pagination.csv",
+    "state": "ready",
+    "code": ""
+  },
+  {
+    "reference": "DOC-006",
+    "filename": "database.puml",
+    "state": "ready",
+    "code": ""
+  },
+  {
+    "reference": "DOC-007",
+    "filename": "alias.plantuml",
+    "state": "ready",
+    "code": ""
+  },
+  {
+    "reference": "DOC-008",
+    "filename": "synthetic.pdf",
+    "state": "ready",
+    "code": ""
+  },
+  {
+    "reference": "DOC-009",
+    "filename": "synthetic.png",
+    "state": "ready",
+    "code": ""
+  },
+  {
+    "reference": "DOC-010",
+    "filename": "synthetic.jpg",
+    "state": "ready",
+    "code": ""
+  },
+  {
+    "reference": "DOC-011",
+    "filename": "synthetic.jpeg",
+    "state": "ready",
+    "code": ""
+  },
+  {
+    "reference": "DOC-012",
+    "filename": "synthetic.svg",
+    "state": "ready",
+    "code": ""
+  },
+  {
+    "reference": "DOC-009",
+    "filename": "invalid.png",
+    "state": "failed",
+    "code": "invalid"
+  },
+  {
+    "reference": "DOC-004",
+    "filename": "ambiguous.csv",
+    "state": "failed",
+    "code": "csv"
+  },
+  {
+    "reference": "DOC-012",
+    "filename": "unsafe.svg",
+    "state": "failed",
+    "code": "unsafe"
+  },
+  {
+    "reference": "DOC-006",
+    "filename": "unsafe.puml",
+    "state": "failed",
+    "code": "unsafe"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "page": "http://127.0.0.1:8000/__preview__/applications/",
+  "desktop": {
+    "scrollWidth": 1280,
+    "width": 1280
+  },
+  "mobile": {
+    "width": 390,
+    "scrollWidth": 390,
+    "menuOpened": true,
+    "escapeClosed": true,
+    "focusReturned": true
+  },
+  "console": []
+}

@@ -1,0 +1,43 @@
+{
+  "scope": "Local loopback HTTP; synthetic corpus; admin experimental preview, not reader business acceptance or real-host qualification",
+  "members": 46,
+  "chatbot_qualified": false,
+  "ordinary": {
+    "/applications/": {
+      "requests": 138,
+      "p95_seconds": 0.2786,
+      "maximum_seconds": 0.318,
+      "statuses": {
+        "200": 138
+      }
+    },
+    "/search/?q=modification": {
+      "requests": 138,
+      "p95_seconds": 1.3605,
+      "maximum_seconds": 1.4243,
+      "statuses": {
+        "200": 138
+      }
+    },
+    "/documents/": {
+      "requests": 138,
+      "p95_seconds": 0.3354,
+      "maximum_seconds": 0.3467,
+      "statuses": {
+        "200": 138
+      }
+    }
+  },
+  "chat_preview": {
+    "requests": 50,
+    "p95_seconds": 2.2531,
+    "maximum_seconds": 2.9364,
+    "statuses": {
+      "200": 50
+    },
+    "batches": 10,
+    "concurrent_per_batch": 5
+  },
+  "ordinary_local_target_met": true,
+  "chat_preview_local_target_met": true
+}

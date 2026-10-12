@@ -1,0 +1,31 @@
+{
+  "scope": "Manual browser observations on isolated fictional corpus",
+  "observed": [
+    "reader login and logout",
+    "skip link initially focused BODY; corrected target now focuses MAIN#main",
+    "search submitted with Enter returns FAQ and specification",
+    "mobile drawer Enter opens; Escape closes and restores focus to menu toggle",
+    "closed mobile sidebar excluded from accessibility snapshot",
+    "hidden workbook sheet selected and displayed with its label",
+    "reader assistant remains qualification pending"
+  ],
+  "widths": {
+    "search": [
+      320,
+      390,
+      1280
+    ],
+    "assistant": [
+      320
+    ],
+    "workbook": [
+      320
+    ]
+  },
+  "page_overflow": false,
+  "final_browser_errors": [],
+  "remaining": [
+    "screen-reader/hardware keyboard and broader browser matrix",
+    "native select arrow interaction and table arrow scrolling did not change state through this automation backend; not claimed as verified in M7"
+  ]
+}

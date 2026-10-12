@@ -1,0 +1,101 @@
+[
+  {
+    "record": "f8541c8e-2b67-40bc-a964-3289ad52a604",
+    "reference": "DOC-002",
+    "source": "synthetic.drawio",
+    "file": "5a264ce4-d440-4a22-a262-39aa9314ceeb",
+    "format": "drawio",
+    "size": 7493,
+    "sha256": "6c95f41b1849d6b9d1ce3de05b3c016e00e1e7654c2dc3ea4400d83e825b678e"
+  },
+  {
+    "record": "124e7ef8-9047-4762-87e9-bca5eb263478",
+    "reference": "DOC-003",
+    "source": "synthetic.xml",
+    "file": "5c88c5b8-5bf9-43c0-90f9-05f377532b3c",
+    "format": "drawio",
+    "size": 4060,
+    "sha256": "431943794526b04fdaa5e7b1f07ae8e70869c4fe3444d4bed441c44824375f9e"
+  },
+  {
+    "record": "0f00d33b-e6ed-4541-844b-33815042c0e6",
+    "reference": "DOC-004",
+    "source": "synthetic.csv",
+    "file": "ac8bbbba-0eb6-46bd-9e76-b81c40c0a739",
+    "format": "csv",
+    "size": 96,
+    "sha256": "f1eb89ef7d8312ae4841de68380395727bb2538067946380aab55ceefd3601c2"
+  },
+  {
+    "record": "7dc36f31-ea73-4a90-8299-d2d4b5b8aed5",
+    "reference": "DOC-005",
+    "source": "pagination.csv",
+    "file": "4111fdf3-34c0-43d7-8aa5-54077dca84c7",
+    "format": "csv",
+    "size": 4500,
+    "sha256": "bd052a52e49bfb9de97f633bdde4ab2e5a0ea58bf0e7da77cea03ca69c00bc01"
+  },
+  {
+    "record": "20c14ceb-9feb-4fbb-8f29-33714b64a9f4",
+    "reference": "DOC-006",
+    "source": "database.puml",
+    "file": "f02c252a-679b-454c-b54b-29c5cebe3eb8",
+    "format": "plantuml",
+    "size": 232,
+    "sha256": "5dfd382bb757399f070b00d394d14f1564da237bcf75a0ab7b9850c405fccdbf"
+  },
+  {
+    "record": "931f4347-5639-45a1-8383-0f58ab5f39b0",
+    "reference": "DOC-007",
+    "source": "alias.plantuml",
+    "file": "5ace59ca-2b07-4146-a623-efdfacdf5301",
+    "format": "plantuml",
+    "size": 28,
+    "sha256": "303be3e629b4fcd236f0f69d11148ef804ed471b559ed3dfde16ee8d2c64e90b"
+  },
+  {
+    "record": "84133b3d-b528-47aa-b450-5b9d40c2769f",
+    "reference": "DOC-008",
+    "source": "synthetic.pdf",
+    "file": "95e321b0-105e-44c7-8700-a5defea8f5b9",
+    "format": "pdf",
+    "size": 1621,
+    "sha256": "ccdadd18818f9e7f126d4e026c5ce85c2a5432ca5692be4c98b350b2890c051a"
+  },
+  {
+    "record": "4e76f23a-d163-4a27-8b31-b9745f760497",
+    "reference": "DOC-009",
+    "source": "synthetic.png",
+    "file": "62979f52-6516-41ba-9e68-2767875a5003",
+    "format": "png",
+    "size": 2204,
+    "sha256": "c21d1c6167340d779df7fddccf2f229187b219c4caaf129d8547784805fa1b68"
+  },
+  {
+    "record": "7897a11a-cb6a-48c4-b228-62385081a644",
+    "reference": "DOC-010",
+    "source": "synthetic.jpg",
+    "file": "4f418132-61dd-47b1-a9f8-863e0f5f117c",
+    "format": "jpeg",
+    "size": 6699,
+    "sha256": "410ac3527c83691e683db6862420916ba9538b2fa674ff7ddb4541990bec2e46"
+  },
+  {
+    "record": "817713af-b5cc-4464-9ca0-edf7d2e49ccb",
+    "reference": "DOC-011",
+    "source": "synthetic.jpeg",
+    "file": "bfde0760-5d0f-495c-b899-04854bdecda5",
+    "format": "jpeg",
+    "size": 6699,
+    "sha256": "410ac3527c83691e683db6862420916ba9538b2fa674ff7ddb4541990bec2e46"
+  },
+  {
+    "record": "2ffbcffc-788c-4266-828c-9ec59483da3e",
+    "reference": "DOC-012",
+    "source": "synthetic.svg",
+    "file": "badc979b-a93c-4d85-abd2-f41a78d2e2a3",
+    "format": "svg",
+    "size": 382,
+    "sha256": "befd7aefa63b5e88632c2e4c7087d4a358c70f7491fd830d243a0c9d52d9849e"
+  }
+]

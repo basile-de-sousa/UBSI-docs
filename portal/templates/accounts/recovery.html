@@ -1,0 +1,12 @@
+{% extends 'accounts/auth_base.html' %}
+{% block title %}Récupérer mon accès{% endblock %}
+{% block auth_content %}
+<p class="eyebrow">RETROUVER VOTRE ACCÈS</p>
+<h2 id="auth-title">Un nouveau départ.</h2>
+<p>Renseignez votre adresse email pour demander un lien de récupération.</p>
+<form method="post" class="auth-form">
+  {% csrf_token %}{% include 'components/fields.html' %}
+  <button class="button button-primary" type="submit">Demander un lien {% include 'components/icon.html' with name='arrow' %}</button>
+</form>
+<a class="auth-link" href="{% url 'login' %}">Revenir à la connexion</a>
+{% endblock %}

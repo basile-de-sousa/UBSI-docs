@@ -1,0 +1,86 @@
+{
+  "url": "http://127.0.0.1:8788/",
+  "diagnostics": {
+    "drawio": {
+      "page": 2,
+      "svgElements": 1,
+      "shapes": 11,
+      "namedStencilLoaded": true,
+      "editingEnabled": false,
+      "parentReadable": false,
+      "violations": [],
+      "resourceUrls": [
+        "http://127.0.0.1:8788/style.css",
+        "http://127.0.0.1:8788/config.js",
+        "http://127.0.0.1:8788/viewer.js",
+        "http://127.0.0.1:8788/stencils.js",
+        "http://127.0.0.1:8788/drawio.js"
+      ]
+    },
+    "externalResources": [],
+    "violations": [],
+    "failures": [],
+    "resources": [
+      "http://127.0.0.1:8788/style.css",
+      "http://127.0.0.1:8788/main.js",
+      "http://127.0.0.1:8788/database_001.png",
+      "http://127.0.0.1:8788/database.png",
+      "http://127.0.0.1:8788/synthetic.png",
+      "http://127.0.0.1:8788/synthetic.jpeg",
+      "http://127.0.0.1:8788/svg-preview.png",
+      "http://127.0.0.1:8788/viewer/drawio",
+      "http://127.0.0.1:8788/pdf.mjs",
+      "http://127.0.0.1:8788/files-results.json",
+      "http://127.0.0.1:8788/workbook.json",
+      "http://127.0.0.1:8788/csv.json",
+      "http://127.0.0.1:8788/pdf.worker.mjs",
+      "http://127.0.0.1:8788/synthetic.pdf",
+      "http://127.0.0.1:8788/config.js",
+      "http://127.0.0.1:8788/viewer.js",
+      "http://127.0.0.1:8788/stencils.js",
+      "http://127.0.0.1:8788/drawio.js"
+    ]
+  },
+  "pdfStatus": "Page 2 / 2",
+  "pdfScriptDialogAbsent": true,
+  "images": [
+    {
+      "alt": "Customer et Booking : diagramme UML fictif",
+      "height": 225,
+      "loaded": true,
+      "width": 177
+    },
+    {
+      "alt": "Application et base : second diagramme fictif",
+      "height": 159,
+      "loaded": true,
+      "width": 170
+    },
+    {
+      "alt": "Flux fictif PNG",
+      "height": 160,
+      "loaded": true,
+      "width": 520
+    },
+    {
+      "alt": "Flux fictif JPEG",
+      "height": 160,
+      "loaded": true,
+      "width": 520
+    },
+    {
+      "alt": "SVG rasterisé localement",
+      "height": 220,
+      "loaded": true,
+      "width": 720
+    }
+  ],
+  "console": [],
+  "exercised": [
+    "draw.io second page and zoom",
+    "PDF second page and zoom",
+    "Excel cached numeric/empty/missing values",
+    "hidden worksheet selection",
+    "CSV quoted multiline and separator display"
+  ]
+}

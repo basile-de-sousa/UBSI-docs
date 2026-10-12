@@ -1,0 +1,16 @@
+<div class="work-summary">{% if revision.progress_label %}<span class="progress-badge">{{ revision.progress_label }}</span>{% endif %}{% if revision.priority_label %}<span class="reference-chip">Priorité {{ revision.priority_label|lower }}</span>{% endif %}<span>Responsable : {% if sprint_snapshot %}{{ sprint_snapshot.responsible_name }}{% else %}{{ revision.responsible.display_name|default:'Non attribué' }}{% endif %}</span></div>
+{% if record.kind == 'epic' %}
+<h2>Objectif</h2>{{ revision.payload.objective|linebreaks }}
+<h2>Description</h2>{{ revision.payload.description|linebreaks }}
+<h2>Périmètre</h2>{{ revision.payload.scope|linebreaks }}
+{% if revision.payload.exclusions %}<h2>Hors périmètre</h2>{{ revision.payload.exclusions|linebreaks }}{% endif %}
+{% if revision.payload.acceptance_conditions %}<h2>Conditions d’acceptation</h2>{{ revision.payload.acceptance_conditions|linebreaks }}{% endif %}
+{% if revision.payload.target_date %}<p>Date cible : {{ revision.payload.target_date }}</p>{% endif %}
+{% elif record.kind == 'story' %}
+<section class="story-statement"><h2>Besoin utilisateur</h2><p><strong>En tant que</strong> {{ revision.payload.actor }}</p><p><strong>Je veux</strong> {{ revision.payload.need }}</p><p><strong>Afin de</strong> {{ revision.payload.benefit }}</p></section>
+{% if revision.payload.context %}<h2>Contexte</h2>{{ revision.payload.context|linebreaks }}{% endif %}
+<h2>Critères d’acceptation</h2><ol>{% for criterion in revision.payload.criteria %}<li>{{ criterion }}</li>{% empty %}<li>Aucun critère renseigné dans ce brouillon.</li>{% endfor %}</ol>
+{% else %}
+<h2>Objectif du sprint</h2>{{ revision.payload.objective|linebreaks }}
+<dl class="sprint-dates"><div><dt>Début</dt><dd>{{ revision.payload.start_date|default:'À renseigner' }}</dd></div><div><dt>Fin</dt><dd>{{ revision.payload.end_date|default:'À renseigner' }}</dd></div></dl>
+{% endif %}

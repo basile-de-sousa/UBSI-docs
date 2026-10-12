@@ -1,0 +1,103 @@
+{
+  "total_seconds_including_fixture_generation": 2.0009681250085123,
+  "peak_rss_mib": 95.203125,
+  "valid_200000_cell_source_bytes": 424211,
+  "cases": [
+    {
+      "case": "upload: exact 20 MiB accepted",
+      "passed": true,
+      "seconds": 0.0,
+      "detail": true
+    },
+    {
+      "case": "upload: 20 MiB + 1 rejected",
+      "passed": true,
+      "seconds": 0.0,
+      "detail": "ValueError"
+    },
+    {
+      "case": "xlsx: oversized expanded metadata rejected",
+      "passed": true,
+      "seconds": 0.0,
+      "detail": "ValueError"
+    },
+    {
+      "case": "xlsx: stream 200,000 cells",
+      "passed": true,
+      "seconds": 0.7006,
+      "detail": 200000
+    },
+    {
+      "case": "xlsx: 200,001 cells rejected",
+      "passed": true,
+      "seconds": 0.7,
+      "detail": "ValueError"
+    },
+    {
+      "case": "xlsx: 51 sheets rejected",
+      "passed": true,
+      "seconds": 0.0037,
+      "detail": "ValueError"
+    },
+    {
+      "case": "xlsx: row 20,000 / column 200 accepted",
+      "passed": true,
+      "seconds": 0.0329,
+      "detail": 1
+    },
+    {
+      "case": "xlsx: populated GS1 rejected",
+      "passed": true,
+      "seconds": 0.001,
+      "detail": "ValueError"
+    },
+    {
+      "case": "xlsx: populated A20001 rejected",
+      "passed": true,
+      "seconds": 0.0018,
+      "detail": "ValueError"
+    },
+    {
+      "case": "raster: long side rejected before load",
+      "passed": true,
+      "seconds": 0.0,
+      "detail": "ValueError"
+    },
+    {
+      "case": "raster: pixel count rejected before load",
+      "passed": true,
+      "seconds": 0.0,
+      "detail": "ValueError"
+    },
+    {
+      "case": "raster: malformed rejected",
+      "passed": true,
+      "seconds": 0.0246,
+      "detail": "UnidentifiedImageError"
+    },
+    {
+      "case": "raster: truncated rejected",
+      "passed": true,
+      "seconds": 0.0001,
+      "detail": "OSError"
+    },
+    {
+      "case": "pdf: 50 pages accepted",
+      "passed": true,
+      "seconds": 0.0009,
+      "detail": 50
+    },
+    {
+      "case": "pdf: 51 pages rejected",
+      "passed": true,
+      "seconds": 0.0009,
+      "detail": "ValueError"
+    },
+    {
+      "case": "pdf: encrypted rejected",
+      "passed": true,
+      "seconds": 0.0017,
+      "detail": "ValueError"
+    }
+  ]
+}

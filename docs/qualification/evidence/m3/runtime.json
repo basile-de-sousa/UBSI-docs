@@ -1,0 +1,47 @@
+{
+  "environment": "ubsi-portal-m2-preview",
+  "migrations": 22,
+  "accounts": 2,
+  "records": 13,
+  "drafts": 10,
+  "revisions": 7,
+  "states": [
+    {
+      "state": "published",
+      "count": 4
+    },
+    {
+      "state": "draft_only",
+      "count": 9
+    }
+  ],
+  "import_receipts": 1,
+  "import_rows": 10,
+  "code_reservations_for_BIL": [
+    "BIL",
+    "BIL2"
+  ],
+  "current_BIL_payload": {
+    "code": "BIL2",
+    "type": "metier",
+    "description": "Site web de vente de billets en ligne. Description modifi\u00e9e dans le portail de pr\u00e9visualisation."
+  },
+  "passages": 6,
+  "noncurrent_passages": 0,
+  "jobs": [
+    {
+      "state": "superseded",
+      "count": 2
+    },
+    {
+      "state": "pending",
+      "count": 2
+    }
+  ],
+  "search_generation": 8,
+  "history_triggers": [
+    "knowledge_record_identity_guard",
+    "knowledge_relation_immutable",
+    "knowledge_revision_immutable"
+  ]
+}

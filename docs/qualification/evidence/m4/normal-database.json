@@ -1,0 +1,8 @@
+{
+  "environment": "normal development database",
+  "migrations": 25,
+  "accounts": 0,
+  "content_records": 0,
+  "closure_snapshots": 0,
+  "active_sprint": null
+}

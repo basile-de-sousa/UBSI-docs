@@ -1,0 +1,11 @@
+{
+  "policy": "hybrid-m6.1-experimental",
+  "policy_sha256": "257fa94eb52270edb933f481024123939c62d71b183a255e0959389803680447",
+  "qualified": false,
+  "records": 7,
+  "passages": 11,
+  "chunks": 11,
+  "indexes": 7,
+  "pending": 0,
+  "failed": 0
+}

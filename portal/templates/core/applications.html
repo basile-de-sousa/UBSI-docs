@@ -1,0 +1,9 @@
+{% extends 'workspace.html' %}
+{% block content %}
+<div class="page-title-row"><div><p class="eyebrow">RÉFÉRENTIEL DU PROJET</p><h1>Applications<span class="title-dot">.</span></h1><p class="page-description">Explorez le système d’information, application par application.</p></div><span class="read-only-label">{% include 'components/icon.html' with name='lock' %} Lecture seule</span></div>
+<section class="directory" aria-labelledby="directory-heading">
+  <div class="directory-toolbar"><h2 id="directory-heading">Répertoire des applications</h2><span class="pill neutral">En préparation</span></div>
+  <div class="empty-state"><div class="empty-grid" aria-hidden="true"><span></span><span></span><span></span><span></span></div><p class="eyebrow">BIENVENUE DANS VOTRE ESPACE</p><h2>Un espace pour chaque application</h2><p>Le répertoire des applications sera publié prochainement.<br>Vous retrouverez ici les besoins et documents associés.</p></div>
+  <div class="directory-footer">{% include 'components/icon.html' with name='layers' %}<span>Les administrateurs préparent les contenus du projet.</span></div>
+</section>
+{% endblock %}

@@ -1,0 +1,7 @@
+{
+  "environment": "normal development database",
+  "migrations": 22,
+  "accounts": 0,
+  "content_records": 0,
+  "project_state_rows": 1
+}

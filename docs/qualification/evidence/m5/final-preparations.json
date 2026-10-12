@@ -1,0 +1,58 @@
+[
+  {
+    "reference": "DOC-001",
+    "file": "667b9622-3bca-49a5-98d8-b54ae920288d",
+    "format": "xlsx",
+    "sha256": "89114c3495ea8a12a2c63ce053ab3b3788fed0c24df3fa8421676fc8a7e133b0",
+    "options_frozen": true,
+    "published_revision_unchanged": 1
+  },
+  {
+    "reference": "DOC-002",
+    "file": "7b58af9c-56d6-4c44-94b8-50a9357d1ed2",
+    "format": "drawio",
+    "sha256": "6c95f41b1849d6b9d1ce3de05b3c016e00e1e7654c2dc3ea4400d83e825b678e",
+    "options_frozen": true,
+    "published_revision_unchanged": 1
+  },
+  {
+    "reference": "DOC-005",
+    "file": "f959c669-09f1-4510-b981-5121a3cdc03a",
+    "format": "csv",
+    "sha256": "bd052a52e49bfb9de97f633bdde4ab2e5a0ea58bf0e7da77cea03ca69c00bc01",
+    "options_frozen": true,
+    "published_revision_unchanged": 1
+  },
+  {
+    "reference": "DOC-006",
+    "file": "0c41cea6-b179-4989-96dd-2dfb24a79c05",
+    "format": "plantuml",
+    "sha256": "5dfd382bb757399f070b00d394d14f1564da237bcf75a0ab7b9850c405fccdbf",
+    "options_frozen": true,
+    "published_revision_unchanged": 1
+  },
+  {
+    "reference": "DOC-008",
+    "file": "2ab19b7d-3003-47bc-bc32-697725bde3b9",
+    "format": "pdf",
+    "sha256": "ccdadd18818f9e7f126d4e026c5ce85c2a5432ca5692be4c98b350b2890c051a",
+    "options_frozen": true,
+    "published_revision_unchanged": 1
+  },
+  {
+    "reference": "DOC-009",
+    "file": "55ad7e7e-0d2e-4f9c-9fcd-086cea5f5f72",
+    "format": "png",
+    "sha256": "c21d1c6167340d779df7fddccf2f229187b219c4caaf129d8547784805fa1b68",
+    "options_frozen": true,
+    "published_revision_unchanged": 1
+  },
+  {
+    "reference": "DOC-012",
+    "file": "358f6744-e886-47b6-ad3d-4ef5f23e474c",
+    "format": "svg",
+    "sha256": "befd7aefa63b5e88632c2e4c7087d4a358c70f7491fd830d243a0c9d52d9849e",
+    "options_frozen": true,
+    "published_revision_unchanged": 1
+  }
+]

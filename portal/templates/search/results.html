@@ -1,0 +1,10 @@
+{% extends 'workspace.html' %}
+{% block content %}
+<div class="page-title-row"><div><p class="eyebrow">LA MÉMOIRE DU PROJET</p><h1>Rechercher<span class="title-dot">.</span></h1><p class="page-description">Retrouvez un contenu dans sa version publiée actuelle.</p></div><a class="button button-secondary" href="{% url 'assistant' %}">Poser une question</a></div>
+<form method="get" role="search" class="content-filters">{% include 'components/fields.html' with form=form %}<button class="button button-primary" type="submit">Rechercher</button><a class="subtle-link" href="{% url 'search' %}">Réinitialiser</a></form>
+<div class="list-heading"><p>{{ page.paginator.count }} résultat{{ page.paginator.count|pluralize }}</p><span class="read-only-label">Contenus publiés uniquement</span></div>
+<div class="search-results">
+{% for item in page %}<a class="search-result" href="{{ item.reader_url }}"><div><span class="reference-chip">{{ item.display_reference }}</span><span class="card-type">{{ item.get_kind_display }}</span></div><h2>{{ item.current_revision.title }}</h2><p>{{ item.current_revision.plain_text|truncatechars:260 }}</p><span class="subtle-link">Consulter le contenu →</span></a>
+{% empty %}<section class="content-empty"><h2>{% if any_published %}Aucun résultat pour ces filtres{% else %}Les premiers contenus arrivent bientôt{% endif %}</h2><p>{% if any_published %}Essayez un autre terme ou réinitialisez les filtres.{% else %}Les administrateurs publieront ici les contenus du projet.{% endif %}</p></section>{% endfor %}
+</div>{% include 'knowledge/pagination.html' %}
+{% endblock %}

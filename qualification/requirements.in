@@ -1,0 +1,12 @@
+# M0 probes only. requirements.lock records the measured macOS/Python 3.12 environment.
+# M1 must create the separate, Linux-qualified portal dependency lock.
+Django==5.2.17
+psycopg[binary]==3.3.6
+argon2-cffi==25.1.0
+openpyxl==3.1.5
+pypdf==6.20.0
+pillow==12.3.0
+CairoSVG==2.9.1
+defusedxml==0.7.1
+sentence-transformers==6.1.0
+pip-tools==7.6.2

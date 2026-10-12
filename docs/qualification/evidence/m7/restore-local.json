@@ -1,0 +1,1 @@
+{"restored": true, "project": "ubsi-restore-m7-delivery", "seconds": 7.438, "counts": {"accounts": 2, "records": 35, "revisions": 40, "files": 25, "passages": 11}, "migrations": 30, "inventory_matches": true, "database_fingerprints_match": true, "source_image": "f887d0a7194905ac69b008e004a8c0375fe5353a58cafe05423d85e8bdbe5f62", "chatbot_qualified": false}

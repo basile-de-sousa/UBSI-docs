@@ -1,0 +1,31 @@
+{
+  "mode": "manual observations only; no automated test suite or retrieval acceptance run",
+  "accounts": "existing fictional admin and reader in isolated ubsi-portal-m2-preview",
+  "observed": [
+    "published French search: modification => FAQ-001 and SPEC-001",
+    "FAQ filter => one result; readable application/epic/sprint labels",
+    "archived M6-DEMO => no search result",
+    "exact FAQ question => verbatim card and current source opened",
+    "unrelated weather question => exact urbanists fallback",
+    "same-title opposite M6-CONFLIT rules => fallback",
+    "draft-only M6-BROUILLON => fallback without private value",
+    "old FAQ-002 link => unavailable after revision replacement",
+    "current FAQ-002 link => unavailable after archive",
+    "new publication before index => technical unavailability",
+    "container worker resumed new publication; card contains version two only",
+    "reader admin page => access denied",
+    "reader assistant => qualification pending, no source cards",
+    "whitespace-only question => local hint, no exchange added",
+    "clear exchange button and navigation remove page-only exchanges",
+    "mobile menu opened and login/logout completed"
+  ],
+  "mobile": {
+    "search_width": 390,
+    "search_page_width": 390,
+    "assistant_width": 390,
+    "assistant_page_width": 390
+  },
+  "final_browser_error_logs": [],
+  "qualified": false,
+  "acceptance_pending": "Owner will supply UBSI questions and expected answers; synthetic proposal not approved."
+}

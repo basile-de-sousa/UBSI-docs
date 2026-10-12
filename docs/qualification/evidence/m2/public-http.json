@@ -1,0 +1,110 @@
+[
+  {
+    "path": "/",
+    "method": "GET",
+    "status": 200,
+    "location": null,
+    "cache_control": "no-store, private",
+    "referrer_policy": "same-origin",
+    "csp_present": true
+  },
+  {
+    "path": "/auth/login/",
+    "method": "GET",
+    "status": 200,
+    "location": null,
+    "cache_control": "no-store, private",
+    "referrer_policy": "same-origin",
+    "csp_present": true
+  },
+  {
+    "path": "/applications/",
+    "method": "GET",
+    "status": 302,
+    "location": "/auth/login/",
+    "cache_control": "no-store, private",
+    "referrer_policy": "same-origin",
+    "csp_present": true
+  },
+  {
+    "path": "/admin/accounts/",
+    "method": "GET",
+    "status": 302,
+    "location": "/auth/login/",
+    "cache_control": "no-store, private",
+    "referrer_policy": "same-origin",
+    "csp_present": true
+  },
+  {
+    "path": "/documents/00000000-0000-0000-0000-000000000001/preview/",
+    "method": "GET",
+    "status": 302,
+    "location": "/auth/login/",
+    "cache_control": "no-store, private",
+    "referrer_policy": "same-origin",
+    "csp_present": true
+  },
+  {
+    "path": "/documents/00000000-0000-0000-0000-000000000001/download/",
+    "method": "GET",
+    "status": 302,
+    "location": "/auth/login/",
+    "cache_control": "no-store, private",
+    "referrer_policy": "same-origin",
+    "csp_present": true
+  },
+  {
+    "path": "/admin/documents/00000000-0000-0000-0000-000000000001/revisions/1/",
+    "method": "GET",
+    "status": 302,
+    "location": "/auth/login/",
+    "cache_control": "no-store, private",
+    "referrer_policy": "same-origin",
+    "csp_present": true
+  },
+  {
+    "path": "/assistant/query/",
+    "method": "POST",
+    "status": 401,
+    "location": null,
+    "cache_control": "no-store, private",
+    "referrer_policy": "same-origin",
+    "csp_present": true,
+    "body": {
+      "status": "unauthenticated",
+      "message": "Veuillez vous connecter."
+    }
+  },
+  {
+    "path": "/health/live/",
+    "method": "GET",
+    "status": 200,
+    "location": null,
+    "cache_control": "no-store, private",
+    "referrer_policy": "same-origin",
+    "csp_present": true,
+    "body": {
+      "status": "ok"
+    }
+  },
+  {
+    "path": "/health/ready/",
+    "method": "GET",
+    "status": 200,
+    "location": null,
+    "cache_control": "no-store, private",
+    "referrer_policy": "same-origin",
+    "csp_present": true,
+    "body": {
+      "status": "ok"
+    }
+  },
+  {
+    "path": "/auth/login/",
+    "method": "POST",
+    "purpose": "Empty request without a CSRF cookie/token; no credentials submitted",
+    "status": 403,
+    "cache_control": "no-store, private",
+    "csp_present": true
+  }
+]

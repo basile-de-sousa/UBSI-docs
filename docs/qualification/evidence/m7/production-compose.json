@@ -1,0 +1,18 @@
+{
+  "parsed": true,
+  "database_published_ports": [],
+  "web_published_ports": [
+    {
+      "mode": "ingress",
+      "host_ip": "127.0.0.1",
+      "target": 8000,
+      "published": "8000",
+      "protocol": "tcp"
+    }
+  ],
+  "web_read_only": true,
+  "worker_read_only": true,
+  "forced_environment": "production",
+  "debug": "false",
+  "scope": "Configuration parsing only; no production service started"
+}

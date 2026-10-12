@@ -1,0 +1,33 @@
+[
+  {
+    "reference": "DOC-009",
+    "draft_file": "dd5edb29-ec43-44e2-bf95-6151e958d90d",
+    "published_file": "62979f52-6516-41ba-9e68-2767875a5003",
+    "source": "invalid.png"
+  },
+  {
+    "reference": "DOC-004",
+    "draft_file": "9e838dea-c2aa-4f6e-b14f-ba6596a6cfcd",
+    "published_file": "ac8bbbba-0eb6-46bd-9e76-b81c40c0a739",
+    "source": "ambiguous.csv"
+  },
+  {
+    "reference": "DOC-012",
+    "draft_file": "474ae9de-4996-4a48-82d1-cc9255532ffd",
+    "published_file": "badc979b-a93c-4d85-abd2-f41a78d2e2a3",
+    "source": "unsafe.svg"
+  },
+  {
+    "reference": "DOC-006",
+    "draft_file": "10c46341-7867-45b9-b945-166adbec2620",
+    "published_file": "f02c252a-679b-454c-b54b-29c5cebe3eb8",
+    "source": "unsafe.puml"
+  },
+  {
+    "operation": "oversized replacement",
+    "message": [
+      "Le fichier dépasse la taille autorisée. Réduisez-le puis réimportez-le."
+    ],
+    "published_revision": 1
+  }
+]

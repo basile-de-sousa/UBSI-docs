@@ -1,0 +1,9 @@
+{% extends 'workspace.html' %}
+{% block content %}
+<div class="page-title-row"><div><p class="eyebrow">ADMINISTRATION</p><h1>Recherche & assistant<span class="title-dot">.</span></h1><p class="page-description">Suivez l’indexation et observez le candidat avant qualification.</p></div><a href="{% url 'assistant' %}" class="button button-secondary">Vue utilisateur</a></div>
+<section class="search-health"><div><strong>{{ counts.records }}</strong><span>sources éligibles</span></div><div><strong>{{ counts.ready }}</strong><span>révisions indexées</span></div><div><strong>{{ counts.pending }}</strong><span>travaux en attente / en cours</span></div><div><strong>{{ counts.failed }}</strong><span>travaux en erreur</span></div></section>
+<form method="post" action="{% url 'search-reindex' %}" class="search-retry">{% csrf_token %}<p>L’indexation ne publie aucun brouillon. Une préparation incomplète suspend les réponses, sans reprendre une ancienne version.</p><button class="button button-secondary" type="submit">Relancer l’indexation des sources publiées</button></form>
+<div class="draft-banner"><strong>{% if qualified %}Politique qualifiée{% else %}Aperçu expérimental · non validé pour les lecteurs{% endif %}</strong><p>Cet aperçu cherche exclusivement dans les versions publiées. Une bonne réponse ici ne constitue pas une qualification. Les réponses incorrectes et les conflits doivent être consignés dans la recette.</p></div>
+{% include 'search/chat.html' %}
+<details class="search-policy"><summary>Informations de qualification</summary><p>Politique : {{ policy.version }}</p><p>Empreinte : <code>{{ fingerprint }}</code></p><p>L’activation nécessite les résultats indépendants et leur revue par les urbanistes. Elle se configure sur le serveur après qualification.</p></details>
+{% endblock %}

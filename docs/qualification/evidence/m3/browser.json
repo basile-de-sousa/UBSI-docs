@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-12",
+  "method": "Manual browser observations through the supported in-app browser API; not an automated domain suite.",
+  "environment": "ubsi-portal-m2-preview",
+  "observations": [
+    {
+      "area": "import",
+      "result": "Ten preview rows created ten private application drafts; reader list empty before publication."
+    },
+    {
+      "area": "specification",
+      "result": "Rich specification saved/published for BIL and PLA; lists, table, code, bold and link preserved."
+    },
+    {
+      "area": "working draft",
+      "result": "Reader revision 1 retained during saved heading/title changes; explicit publish created revision 2."
+    },
+    {
+      "area": "anchor",
+      "id": "8e0c4c84-3c0c-498d-b5de-cd4c9d86999c",
+      "result": "Contexte renamed to Contexte partagé with same section UUID; unknown section query showed missing-section notice."
+    },
+    {
+      "area": "stale tabs",
+      "result": "Second tab save rejected; title Saisie conservée depuis un ancien onglet and body retained. Synthetic input separately saved for recovery."
+    },
+    {
+      "area": "restore/archive",
+      "result": "Revision 1 restored as draft while revision 2 remained current; required application archive refused; specification archive made reader URL unavailable; republication created revision 3."
+    },
+    {
+      "area": "FAQ",
+      "result": "Question/answer, category, two aliases, application/support links published; searching Visibilité du brouillon returned one question."
+    },
+    {
+      "area": "application identity",
+      "result": "BIL renamed to BIL2 with same UUID; reverse links retained; repeated CSV import did not overwrite new description."
+    },
+    {
+      "area": "publication validation",
+      "result": "Empty body refused. After explicit form-action correction, corrected body saved from refusal page. Draft-only BKG target then blocked publication; admin preview retained text and hid the target."
+    },
+    {
+      "area": "reader permissions",
+      "result": "No admin controls; direct historical revision/draft preview refused; never-published SPEC-002 reader URL unavailable."
+    },
+    {
+      "area": "responsive",
+      "result": "Reader specification, FAQ and admin editor document widths matched 390px viewport after grid correction. Desktop captures at 1280px. Menu opens/closes."
+    },
+    {
+      "area": "editor controls",
+      "result": "Row addition 3→4 and undo 4→3; column addition 2→3 and undo 3→2; mobile save retained the two-column table."
+    },
+    {
+      "area": "draft filter",
+      "result": "Ten drafts counted and ten records listed, including one published record with a working draft."
+    },
+    {
+      "area": "console",
+      "result": "Final editor/reader warning/error captures empty after local pre-wrap CSS correction."
+    }
+  ],
+  "limits": [
+    "One admin identity in two stale tabs, not simultaneous multi-admin concurrency/load.",
+    "No browser destruction of unpublished drafts or replacement of existing drafts.",
+    "No real SMTP, file adapters or chatbot qualification in M3.",
+    "No password creation/reset entered through browser; existing synthetic credentials used for sign-in."
+  ]
+}

@@ -1,0 +1,132 @@
+#1 [internal] load local bake definitions
+#1 reading from stdin 551B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 2.37kB done
+#2 DONE 0.0s
+
+#3 resolve image config for docker-image://docker.io/docker/dockerfile:1@sha256:4edf897a3ffa55b89f906fc8cc78afdb3f1834cc9c7083565e611a8a7d5fe99e
+#3 DONE 0.0s
+
+#4 docker-image://docker.io/docker/dockerfile:1@sha256:4edf897a3ffa55b89f906fc8cc78afdb3f1834cc9c7083565e611a8a7d5fe99e
+#4 resolve docker.io/docker/dockerfile:1@sha256:4edf897a3ffa55b89f906fc8cc78afdb3f1834cc9c7083565e611a8a7d5fe99e done
+#4 CACHED
+
+#5 [internal] load metadata for docker.io/library/python:3.12.14-slim-bookworm@sha256:392307d22300de8b5986851a12d9176dfc0fc073e65bf6523ebd7dcbeb23564e
+#5 DONE 0.0s
+
+#6 [internal] load metadata for docker.io/library/node:24.19.0-bookworm-slim@sha256:a9f5f7c91a432850b2a8a7797adf5eadb6c733ceed61167806cee7ea7fbc29df
+#6 DONE 0.0s
+
+#7 [internal] load .dockerignore
+#7 transferring context: 300B done
+#7 DONE 0.0s
+
+#8 [dependencies 1/4] FROM docker.io/library/python:3.12.14-slim-bookworm@sha256:392307d22300de8b5986851a12d9176dfc0fc073e65bf6523ebd7dcbeb23564e
+#8 resolve docker.io/library/python:3.12.14-slim-bookworm@sha256:392307d22300de8b5986851a12d9176dfc0fc073e65bf6523ebd7dcbeb23564e 0.0s done
+#8 DONE 0.0s
+
+#9 [frontend 1/9] FROM docker.io/library/node:24.19.0-bookworm-slim@sha256:a9f5f7c91a432850b2a8a7797adf5eadb6c733ceed61167806cee7ea7fbc29df
+#9 resolve docker.io/library/node:24.19.0-bookworm-slim@sha256:a9f5f7c91a432850b2a8a7797adf5eadb6c733ceed61167806cee7ea7fbc29df 0.0s done
+#9 DONE 0.0s
+
+#10 [internal] load build context
+#10 transferring context: 11.79kB done
+#10 DONE 0.0s
+
+#11 [runtime  3/12] RUN groupadd --gid 10001 portal && useradd --uid 10001 --gid portal --no-create-home portal && mkdir -p /var/lib/ubsi/private && chown portal:portal /var/lib/ubsi/private && chmod 700 /var/lib/ubsi/private
+#11 CACHED
+
+#12 [dependencies 4/4] RUN python -m venv /opt/venv && /opt/venv/bin/pip install --no-cache-dir --require-hashes --only-binary=:all: -r requirements.lock
+#12 CACHED
+
+#13 [dependencies 2/4] WORKDIR /build
+#13 CACHED
+
+#14 [dependencies 3/4] COPY requirements.lock ./
+#14 CACHED
+
+#15 [runtime  2/12] WORKDIR /app/portal
+#15 CACHED
+
+#16 [runtime  4/12] COPY --from=dependencies /opt/venv /opt/venv
+#16 CACHED
+
+#17 [runtime  5/12] COPY manage.py ./
+#17 CACHED
+
+#18 [frontend 2/9] WORKDIR /build
+#18 CACHED
+
+#19 [frontend 7/9] COPY public ./public
+#19 CACHED
+
+#20 [frontend 3/9] COPY package.json package-lock.json .npmrc ./
+#20 CACHED
+
+#21 [frontend 8/9] COPY scripts/vendor-notices.mjs ./scripts/vendor-notices.mjs
+#21 CACHED
+
+#22 [frontend 4/9] RUN npm ci --ignore-scripts
+#22 CACHED
+
+#23 [frontend 5/9] COPY tsconfig.json vite.config.mjs ./
+#23 CACHED
+
+#24 [frontend 6/9] COPY frontend ./frontend
+#24 CACHED
+
+#25 [frontend 9/9] RUN npm run typecheck && npm run build
+#25 CACHED
+
+#26 [runtime  6/12] COPY config ./config
+#26 DONE 0.0s
+
+#27 [runtime  7/12] COPY accounts ./accounts
+#27 DONE 0.0s
+
+#28 [runtime  8/12] COPY core ./core
+#28 DONE 0.0s
+
+#29 [runtime  9/12] COPY documents ./documents
+#29 DONE 0.0s
+
+#30 [runtime 10/12] COPY templates ./templates
+#30 DONE 0.0s
+
+#31 [runtime 11/12] COPY --from=frontend /build/static-built ./static-built
+#31 DONE 0.0s
+
+#32 [runtime 12/12] RUN mkdir /build-private && PORTAL_ENV=development DEBUG=false SECRET_KEY=build-only-unused-secret-key-for-static-collection-00000000 ALLOWED_HOSTS=localhost DATABASE_URL=postgresql://build:build@localhost/build PRIVATE_STORAGE_ROOT=/build-private python manage.py collectstatic --noinput && rm -r /build-private
+#32 0.532
+#32 0.532 4 static files copied to '/app/portal/static-collected', 4 post-processed.
+#32 DONE 0.6s
+
+#33 exporting to image
+#33 exporting layers 0.1s done
+#33 exporting manifest sha256:62f61a41bf1dc7c2b469015381712adf70be45737393ae9c4755f2eb5b0f6574
+#33 exporting manifest sha256:62f61a41bf1dc7c2b469015381712adf70be45737393ae9c4755f2eb5b0f6574 done
+#33 exporting config sha256:85cec8e44f1dbc4a044097d0fc3f0bc3284c519d493e26efb060ee40418c5a53 done
+#33 exporting attestation manifest sha256:d81ad859201f8068ebdb4d0504d4cb4f8afc5120da2f88e86b52098bb3a6f318 done
+#33 exporting manifest list sha256:f4e2b2aaf77af0e94750d4f88382fd28c00a45f31c6474f3d23f3d578af358f1 done
+#33 naming to docker.io/library/ubsi-portal:local done
+#33 unpacking to docker.io/library/ubsi-portal:local 0.0s done
+#33 DONE 0.1s
+
+#34 resolving provenance for metadata file
+#34 DONE 0.0s
+ ubsi-portal:local  Built
+ Container ubsi-portal-db-1  Running
+ Container ubsi-portal-migrate-1  Recreate
+ Container ubsi-portal-migrate-1  Recreated
+ Container ubsi-portal-web-1  Recreate
+ Container ubsi-portal-web-1  Recreated
+ Container ubsi-portal-db-1  Waiting
+ Container ubsi-portal-db-1  Healthy
+ Container ubsi-portal-migrate-1  Starting
+ Container ubsi-portal-migrate-1  Started
+ Container ubsi-portal-migrate-1  Waiting
+ Container ubsi-portal-migrate-1  Exited
+ Container ubsi-portal-web-1  Starting
+ Container ubsi-portal-web-1  Started

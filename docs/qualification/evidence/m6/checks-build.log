@@ -1,0 +1,18 @@
+2026-10-12 — Local technical checks, not automated acceptance tests
+
+Native Python 3.12.14 / Node 24
+Django check (DEBUG=false): System check identified no issues (0 silenced).
+makemigrations --check --dry-run: No changes detected
+migrate --check: exit 0
+npm typecheck (tsc --noEmit): exit 0
+
+Final Docker build: exit 0; frontend/static/model asset stages completed
+Image: sha256:7937d5ca9de63cf77a0bdbc810d0eba6278578d0493d4ddb5b9c09f2ca942584
+Architecture: arm64
+Size: 1236503758 bytes
+Isolated Compose migrate: exit 0
+Final container Django check: System check identified no issues (0 silenced).
+Final container makemigrations --check --dry-run: No changes detected
+Normal local database: search.0002 applied successfully; 30 migrations, no accounts/content/files/jobs
+
+No automated test suite or retrieval quality evaluation was run.

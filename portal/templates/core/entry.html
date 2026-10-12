@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Bienvenue{% endblock %}
+{% block body %}
+<div class="entry-page">
+  <header class="entry-header"><a class="brand brand-dark" href="{% url 'entry' %}"><span class="brand-mark">U</span><span>UBSI<span class="brand-caption">PORTAIL PROJET</span></span></a><span class="private-label">{% include 'components/icon.html' with name='lock' %} Espace privé</span></header>
+  <main id="main" class="entry-main">
+    <div class="entry-copy"><p class="eyebrow">UNE MÉMOIRE COMMUNE</p><h1>Tout le projet.<br>Un même endroit.</h1><p class="entry-description">Les applications, les décisions et les documents UBSI, réunis pour avancer ensemble.</p><div class="entry-topics"><span>Applications</span><span>Epics & user stories</span><span>Spécifications</span><span>Documents & FAQ</span></div></div>
+    <section class="access-card" aria-labelledby="access-title"><div class="access-icon">{% include 'components/icon.html' with name='lock' %}</div><span class="pill">En préparation</span><h2 id="access-title">Votre espace projet<br>prend forme.</h2><p>L’accès sera réservé aux membres invités par un administrateur. La connexion n’est pas encore ouverte.</p><div class="access-note">{% include 'components/icon.html' with name='help' %}<p>Pour toute question sur le projet, rapprochez-vous des urbanistes.</p></div>{% if development_preview %}<a class="button button-primary" href="{% url 'shell-preview' %}">Voir l’aperçu de l’interface {% include 'components/icon.html' with name='arrow' %}</a><p class="dev-caption">Aperçu local · Aucun contenu du projet</p>{% endif %}</section>
+  </main>
+  <footer class="entry-footer"><span>UBSI · La connaissance au service du projet</span><span>Portail en cours de construction</span></footer>
+</div>
+{% endblock %}

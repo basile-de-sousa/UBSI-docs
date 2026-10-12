@@ -1,0 +1,74 @@
+{
+  "browser": "Codex In-app Browser",
+  "desktop": {
+    "width": 1280,
+    "documentWidth": 1280
+  },
+  "mobile": {
+    "width": 390,
+    "documentWidth": 390,
+    "menuOpened": true,
+    "escapeClosed": true,
+    "focusReturnedToToggle": true
+  },
+  "observations": [
+    "Interactive bootstrap created the isolated synthetic administrator.",
+    "Admin invitation was captured by the local Mailpit sink.",
+    "Resending invalidated the first invitation claim.",
+    "Acceptance form fixes the invited email and removes the bearer URL.",
+    "Reader account was activated through the application service, not by submitting a new credential through browser UI.",
+    "Reader sign-in shows no administrative navigation.",
+    "Reader direct admin GET and stale admin POST display Access reserved.",
+    "Last-active-administrator demotion was rejected.",
+    "A role promotion through the service was visible in the existing session; self-demotion through the UI removed admin navigation.",
+    "Deactivation and reactivation through the service did not revive the old reader session.",
+    "Known/unknown recovery requests showed identical public acknowledgement.",
+    "Reset form uses a clean URL; the application service changed the synthetic password.",
+    "Password reset revoked the existing reader session; used reset and invitation claims were rejected.",
+    "Stopping Mailpit caused an actionable invitation error; database inspection found neither an invitation nor a user for the failed delivery.",
+    "Known/unknown recovery requests showed identical transport-failure text.",
+    "Inviting an existing account returned an existing-account message.",
+    "Referrer policy corrected after WebKit Origin:null rejected auth form POSTs; logout to auth/login to login succeeded afterwards."
+  ],
+  "throttle": [
+    {
+      "attempt": 1,
+      "blocked": false,
+      "genericInvalid": true
+    },
+    {
+      "attempt": 2,
+      "blocked": false,
+      "genericInvalid": true
+    },
+    {
+      "attempt": 3,
+      "blocked": false,
+      "genericInvalid": true
+    },
+    {
+      "attempt": 4,
+      "blocked": false,
+      "genericInvalid": true
+    },
+    {
+      "attempt": 5,
+      "blocked": false,
+      "genericInvalid": true
+    },
+    {
+      "attempt": 6,
+      "blocked": true,
+      "genericInvalid": false
+    }
+  ],
+  "knownAndUnknownRecoveryTextEqual": true,
+  "knownAndUnknownTransportFailureTextEqual": true,
+  "console": [],
+  "limitations": [
+    "No browser submission of a new password during invitation acceptance or reset.",
+    "No automated domain suite added or run.",
+    "No concurrent-request or real SMTP/HTTPS delivery qualification.",
+    "File routes are authorization stubs, not real file viewers/downloads."
+  ]
+}

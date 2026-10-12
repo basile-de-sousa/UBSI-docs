@@ -3,3 +3,18 @@ __pycache__/
 .venv/
 .DS_Store
 ~$*
+
+# Local M0 environments, generated fixtures, model cache and probe output.
+/.qualification/
+
+# Portal dependencies, generated assets and private local configuration.
+/portal/.venv/
+/portal/node_modules/
+/portal/static-built/
+/portal/static-collected/
+/portal/.env
+/portal/.env.*
+!/portal/.env.example
+/portal/.vendor/
+/portal/public/vendor/
+/portal/.models/

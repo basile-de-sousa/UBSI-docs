@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block body %}
+<div class="workspace">
+  <aside id="sidebar" class="sidebar" data-sidebar>
+    <a class="brand" href="{% url 'applications' %}"><span class="brand-mark">U</span><span>UBSI<span class="brand-caption">PORTAIL PROJET</span></span></a>
+    <button class="sidebar-close" data-menu-close aria-label="Fermer la navigation">×</button>
+    <div class="project-label"><span class="project-dot"></span> Espace du projet UBSI</div>
+    <nav aria-label="Navigation principale">
+      <p class="nav-heading">EXPLORER LE PROJET</p>
+      <a class="nav-item {% if page_section == 'applications' %}active{% endif %}" href="{% url 'applications' %}" {% if page_section == 'applications' %}aria-current="page"{% endif %}>{% include 'components/icon.html' with name='grid' %} Applications</a>
+      <a class="nav-item {% if page_section == 'epic' %}active{% endif %}" href="{% url 'epics' %}" {% if page_section == 'epic' %}aria-current="page"{% endif %}>{% include 'components/icon.html' with name='layers' %} Epics</a>
+      <a class="nav-item {% if page_section == 'story' %}active{% endif %}" href="{% url 'stories' %}" {% if page_section == 'story' %}aria-current="page"{% endif %}>{% include 'components/icon.html' with name='list' %} User stories</a>
+      <a class="nav-item {% if page_section == 'sprint' %}active{% endif %}" href="{% url 'sprints' %}" {% if page_section == 'sprint' %}aria-current="page"{% endif %}>{% include 'components/icon.html' with name='calendar' %} Sprints</a>
+      <p class="nav-heading nav-second">CONNAISSANCES</p>
+      <a class="nav-item {% if page_section == 'search' %}active{% endif %}" href="{% url 'search' %}" {% if page_section == 'search' %}aria-current="page"{% endif %}>{% include 'components/icon.html' with name='search' %} Recherche</a>
+      <a class="nav-item {% if page_section == 'specification' %}active{% endif %}" href="{% url 'specifications' %}" {% if page_section == 'specification' %}aria-current="page"{% endif %}>{% include 'components/icon.html' with name='file' %} Spécifications</a>
+      <a class="nav-item {% if page_section == 'document' %}active{% endif %}" href="{% url 'documents' %}" {% if page_section == 'document' %}aria-current="page"{% endif %}>{% include 'components/icon.html' with name='folder' %} Documents</a>
+      <a class="nav-item {% if page_section == 'faq' %}active{% endif %}" href="{% url 'faq' %}" {% if page_section == 'faq' %}aria-current="page"{% endif %}>{% include 'components/icon.html' with name='help' %} FAQ</a>
+      <a class="nav-item {% if page_section == 'assistant' %}active{% endif %}" href="{% url 'assistant' %}" {% if page_section == 'assistant' %}aria-current="page"{% endif %}>{% include 'components/icon.html' with name='help' %} Assistant FAQ</a>
+      {% if user.role == 'admin' %}
+      <p class="nav-heading nav-second">ADMINISTRER</p>
+      <a class="nav-item {% if page_section == 'accounts' %}active{% endif %}" href="{% url 'accounts' %}" {% if page_section == 'accounts' %}aria-current="page"{% endif %}>{% include 'components/icon.html' with name='lock' %} Comptes & accès</a>
+      <a class="nav-item {% if page_section == 'knowledge' %}active{% endif %}" href="{% url 'knowledge-admin' %}" {% if page_section == 'knowledge' %}aria-current="page"{% endif %}>{% include 'components/icon.html' with name='file' %} Contenus</a>
+      <a class="nav-item {% if page_section == 'search-admin' %}active{% endif %}" href="{% url 'search-admin' %}">{% include 'components/icon.html' with name='help' %} Recherche & assistant</a>
+      {% endif %}
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="preview-profile"><span class="profile-avatar">{{ user.display_name|first|upper }}</span><div><strong>{{ user.display_name }}</strong><span>{{ user.get_role_display }}</span></div></div>
+      <form method="post" action="{% url 'logout' %}" class="signout-form">{% csrf_token %}<button class="signout-button" type="submit">Se déconnecter</button></form>
+    </div>
+  </aside>
+  <div class="workspace-content">
+    <header class="topbar"><div class="breadcrumb"><button class="menu-toggle" data-menu-toggle aria-controls="sidebar" aria-expanded="false" aria-label="Afficher la navigation">{% include 'components/icon.html' with name='menu' %}</button><span>Projet UBSI</span>{% include 'components/icon.html' with name='chevron' %}<strong>{{ page_title }}</strong></div><span class="private-label">{% include 'components/icon.html' with name='lock' %}<span>{{ user.get_role_display }}</span></span></header>
+    <main id="main" class="page-content" tabindex="-1">
+      {% include 'components/messages.html' %}
+      {% block content %}{% endblock %}
+      <footer class="workspace-footer"><span>UBSI · Une mémoire commune du projet</span><span>Contenus publiés par les administrateurs</span></footer>
+    </main>
+  </div>
+</div>
+{% endblock %}

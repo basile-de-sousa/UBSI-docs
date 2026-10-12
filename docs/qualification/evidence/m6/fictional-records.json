@@ -1,0 +1,22 @@
+{
+  "lifecycle": {
+    "record": "d0f43bcd-c816-478a-ba51-ac559255973a",
+    "revision": "08257a7b-9aa6-4e56-875b-fdfe06e9b817",
+    "reference": "FAQ-002"
+  },
+  "conflict_a": {
+    "record": "df2dc56b-67e3-49ef-ac63-14020f1708d9",
+    "revision": "30be427b-49a0-4216-ba4b-f40c675d6ada",
+    "reference": "FAQ-003"
+  },
+  "conflict_b": {
+    "record": "3a350436-1e2e-4ba6-9673-5d6818276858",
+    "revision": "bf6229c5-4175-446c-856e-f5ecf74cca34",
+    "reference": "FAQ-004"
+  },
+  "draft_only": {
+    "record": "fbd6b3a5-dbb5-4529-a403-3fe1277d2535",
+    "revision": null,
+    "reference": "FAQ-005"
+  }
+}

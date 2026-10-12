@@ -1,0 +1,24 @@
+2026-10-12 — M7 local engineering checks
+
+Final Linux ARM64 Docker build: exit 0
+Image: sha256:f887d0a7194905ac69b008e004a8c0375fe5353a58cafe05423d85e8bdbe5f62
+Architecture: arm64
+Size: 1236518726 bytes
+Frontend typecheck/build and static collection: completed by the image build
+PostgreSQL migration stage: exit 0; 30 migrations
+Django configuration check: no issues
+makemigrations --check --dry-run: no changes detected
+migrate --check: exit 0
+CSV conversion: 10/0/0 rows; exit 0
+Synthetic production check --deploy --fail-level WARNING: no issues
+Unsafe debug, wildcard proxy and placeholder secret: rejected
+Production Compose: parsed without starting production
+Remote CI: not run
+
+Runtime acceptance: 45 passed; 4 host-script cases skipped in runtime
+Host operations acceptance: those 4 cases passed separately
+Total distinct passing checks: 49
+Reader chatbot: qualification remains false
+
+Native file checks initially lacked Cairo; final file acceptance uses Linux image.
+Native hardware-keyboard/screen-reader and actual-host qualification remain open.

@@ -1,0 +1,11 @@
+{% extends 'accounts/auth_base.html' %}
+{% block title %}Activer mon compte{% endblock %}
+{% block auth_content %}
+<p class="eyebrow">VOUS ÊTES INVITÉ</p>
+<h2 id="auth-title">Rejoignez le projet.</h2>
+<p>Votre invitation est destinée à <strong>{{ invitation.email }}</strong>. Ce compte aura le rôle « {{ invitation.get_role_display }} ».</p>
+<form method="post" class="auth-form">
+  {% csrf_token %}{% include 'components/fields.html' %}
+  <button class="button button-primary" type="submit">Activer mon compte {% include 'components/icon.html' with name='arrow' %}</button>
+</form>
+{% endblock %}

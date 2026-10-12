@@ -1,0 +1,19 @@
+{% load static portal_assets %}{% portal_assets as assets %}
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="robots" content="noindex, nofollow">
+  <title>{% block title %}Portail projet{% endblock %} · UBSI</title>
+  <link rel="icon" type="image/svg+xml" href="{% static 'assets/favicon.svg' %}">
+  {% for stylesheet in assets.styles %}<link rel="stylesheet" href="{% static stylesheet %}">{% endfor %}
+  <script type="module" src="{% static assets.script %}"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+  {% include 'components/icons.html' %}
+  {% block body %}{% endblock %}
+</body>
+</html>

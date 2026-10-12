@@ -1,0 +1,16 @@
+{
+  "tier": "weekly",
+  "quiesced_seconds": 3.322,
+  "artifact_sizes": {
+    "database.dump": 164002,
+    "private.tar": 634880,
+    "audit.json": 14056
+  },
+  "verified": true,
+  "retention": {
+    "keep_count": 4,
+    "expired_candidates_count": 0,
+    "deleted": 0
+  },
+  "scope": "Fictional local backup points only; no off-host transfer or scheduler configured"
+}

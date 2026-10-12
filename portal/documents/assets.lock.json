@@ -1,0 +1,46 @@
+{
+  "downloads": {
+    "drawio": {
+      "version": "32.4.1",
+      "url": "https://raw.githubusercontent.com/jgraph/drawio/v32.4.1/src/main/webapp/js/viewer-static.min.js",
+      "path": "assets/viewer-static.min.js",
+      "license": "Apache-2.0; retain bundled third-party notices",
+      "sha256": "bc7586cb62eec98018c13b78619078d3a7179cc7bfc711c566dda19527520a30"
+    },
+    "plantuml": {
+      "version": "1.2026.8",
+      "url": "https://github.com/plantuml/plantuml/releases/download/v1.2026.8/plantuml-mit-1.2026.8.jar",
+      "path": "assets/plantuml.jar",
+      "license": "MIT distribution",
+      "sha256": "3629c9cd017c7f73e6450396eea0040216c7e1eef8473ce33cc1aad469dab2f9"
+    },
+    "pdfjs": {
+      "version": "6.4.299",
+      "url": "https://registry.npmjs.org/pdfjs-dist/-/pdfjs-dist-6.4.299.tgz",
+      "path": "assets/pdfjs.tgz",
+      "license": "Apache-2.0",
+      "sha256": "86269b40170eb41740ea05ad2102d71d33de4f122b34eb2f478be0ea7779c415"
+    },
+    "drawio_stencils": {
+      "version": "32.4.1",
+      "url": "https://raw.githubusercontent.com/jgraph/drawio/v32.4.1/src/main/webapp/js/stencils.min.js",
+      "path": "assets/stencils.min.js",
+      "sha256": "f6ee4f7244ed74ba74b012ee621bc8d14f8492583a976e37f2b75328145c29b6",
+      "license": "Upstream stencil license; see STENCILS-LICENSE"
+    },
+    "drawio_stencil_license": {
+      "version": "32.4.1",
+      "url": "https://raw.githubusercontent.com/jgraph/drawio/v32.4.1/src/main/webapp/stencils/LICENSE",
+      "path": "assets/STENCILS-LICENSE",
+      "sha256": "f4098ff053b5954abbf69b15811ef06cd277847ca49934beda355c3d841ebdac",
+      "license": "Upstream stencil license; see STENCILS-LICENSE"
+    },
+    "drawio_license": {
+      "version": "32.4.1",
+      "url": "https://raw.githubusercontent.com/jgraph/drawio/v32.4.1/LICENSE",
+      "path": "assets/DRAWIO-LICENSE",
+      "sha256": "43070e2d4e532684de521b885f385d0841030efa2b1a20bafb76133a5e1379c1",
+      "license": "Apache-2.0"
+    }
+  }
+}

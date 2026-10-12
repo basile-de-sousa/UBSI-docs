@@ -1,0 +1,47 @@
+{
+  "all_ready": true,
+  "files": [
+    {
+      "reference": "DOC-001",
+      "state": "ready",
+      "format": "xlsx",
+      "limit_inputs_frozen": true
+    },
+    {
+      "reference": "DOC-002",
+      "state": "ready",
+      "format": "drawio",
+      "limit_inputs_frozen": true
+    },
+    {
+      "reference": "DOC-005",
+      "state": "ready",
+      "format": "csv",
+      "limit_inputs_frozen": true
+    },
+    {
+      "reference": "DOC-006",
+      "state": "ready",
+      "format": "plantuml",
+      "limit_inputs_frozen": true
+    },
+    {
+      "reference": "DOC-008",
+      "state": "ready",
+      "format": "pdf",
+      "limit_inputs_frozen": true
+    },
+    {
+      "reference": "DOC-009",
+      "state": "ready",
+      "format": "png",
+      "limit_inputs_frozen": true
+    },
+    {
+      "reference": "DOC-012",
+      "state": "ready",
+      "format": "svg",
+      "limit_inputs_frozen": true
+    }
+  ]
+}

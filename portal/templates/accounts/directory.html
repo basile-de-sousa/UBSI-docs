@@ -1,0 +1,38 @@
+{% extends 'workspace.html' %}
+{% block content %}
+<div class="page-title-row"><div><p class="eyebrow">ADMINISTRATION · ACCÈS AU PROJET</p><h1>Les membres du projet<span class="title-dot">.</span></h1><p class="page-description">Invitez l’équipe et gérez les accès à l’espace UBSI.</p></div><span class="member-count">{{ active_count }} actif{{ active_count|pluralize }} / {{ members|length }} membre{{ members|length|pluralize }}</span></div>
+<section class="invite-panel" aria-labelledby="invite-heading">
+  <div><p class="eyebrow">AGRANDIR L’ESPACE COMMUN</p><h2 id="invite-heading">Inviter un membre</h2><p>Le destinataire choisira son nom et son mot de passe.<br>L’invitation est valable 72 heures.</p></div>
+  <form method="post" action="{% url 'invite' %}" class="invite-form">
+    {% csrf_token %}{% include 'components/fields.html' with form=invite_form %}
+    <button class="button button-primary" type="submit">Envoyer l’invitation {% include 'components/icon.html' with name='arrow' %}</button>
+  </form>
+</section>
+<section class="members-section" aria-labelledby="members-heading">
+  <div class="section-heading"><h2 id="members-heading">Membres</h2><p>Les changements de droits s’appliquent dès la prochaine requête.</p></div>
+  <div class="member-list">
+    {% for member in members %}
+    <article class="member-row">
+      <div class="member-identity"><span class="member-avatar">{{ member.display_name|first|upper }}</span><div><h3>{{ member.display_name }}{% if member.pk == user.pk %} <span class="self-label">Vous</span>{% endif %}</h3><p>{{ member.email }}</p>{% if not member.is_active %}<span class="state-inactive">Désactivé</span>{% endif %}{% if member.recovery_failure_at %}<p class="delivery-warning">Un email de récupération n’a pas pu être remis. Vérifiez le service d’envoi et invitez le membre à réessayer.</p>{% endif %}</div></div>
+      <form method="post" action="{% url 'account-access' member.pk %}" class="access-form">
+        {% csrf_token %}{{ member.access_form.expected_version }}
+        {% if member.access_form.non_field_errors %}<div class="form-errors" role="alert">{{ member.access_form.non_field_errors }}</div>{% endif %}
+        <div class="form-field">{{ member.access_form.role.label_tag }}{{ member.access_form.role }}{{ member.access_form.role.errors }}</div>
+        <label class="check-label" for="{{ member.access_form.is_active.id_for_label }}">{{ member.access_form.is_active }} Compte actif</label>
+        <button class="button button-secondary" type="submit">Enregistrer</button>
+        {% if member.access_form.expected_version.errors %}<div class="field-errors">{{ member.access_form.expected_version.errors }}</div>{% endif %}
+      </form>
+    </article>
+    {% endfor %}
+  </div>
+  <p class="section-note">Désactiver un compte conserve son historique. Le dernier administrateur actif doit conserver ses accès.</p>
+</section>
+<section class="pending-section" aria-labelledby="pending-heading">
+  <div class="section-heading"><h2 id="pending-heading">Invitations en attente <span class="small-count">{{ invitations|length }}</span></h2><p>Renvoyer une invitation remplace son précédent lien.</p></div>
+  <div class="member-list">
+    {% for invitation in invitations %}
+    <article class="invitation-row"><div><h3>{{ invitation.email }}</h3><p>{{ invitation.get_role_display }} · Envoyée le {{ invitation.sent_at|date:'d/m/Y à H:i' }}</p></div><span class="pill {% if invitation.expired %}neutral{% endif %}">{% if invitation.expired %}Expirée{% else %}En attente{% endif %}</span><form method="post" action="{% url 'invite-resend' invitation.pk %}">{% csrf_token %}<button class="button button-secondary" type="submit">Renvoyer</button></form></article>
+    {% empty %}<p class="list-empty">Aucune invitation en attente. Les prochaines invitations apparaîtront ici.</p>{% endfor %}
+  </div>
+</section>
+{% endblock %}

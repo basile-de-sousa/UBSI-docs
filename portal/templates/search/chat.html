@@ -1,0 +1,6 @@
+<section class="assistant-panel" data-assistant data-query-url="{{ query_url }}">
+<div class="assistant-intro"><span class="assistant-mark" aria-hidden="true">?</span><div><h2>Une question sur le projet ?</h2><p>Je vous oriente vers une réponse déjà publiée dans la FAQ, les epics, les user stories ou les spécifications.</p></div></div>
+<div class="assistant-transcript" data-chat-transcript role="log" aria-label="Questions et réponses de cette page" aria-live="polite" aria-relevant="additions"></div>
+<form method="post" action="{{ query_url }}" data-chat-form>{% csrf_token %}{% include 'components/fields.html' with form=form %}<p class="field-help" id="chat-help">Chaque question est indépendante. Les messages restent sur cette page, sans historique enregistré. Les fichiers importés ne sont pas interrogés.</p><div class="chat-actions"><button class="button button-primary" type="submit" data-chat-send>Rechercher une réponse →</button><button class="button button-secondary" type="button" data-chat-clear>Effacer les échanges</button></div><p data-chat-status class="chat-status" role="status"></p></form>
+<noscript><p class="message">Activez JavaScript pour poser une question, ou consultez la <a href="{% url 'faq' %}">FAQ</a> et la <a href="{% url 'search' %}">recherche</a>.</p></noscript>
+</section>

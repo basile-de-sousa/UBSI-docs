@@ -1,0 +1,649 @@
+{
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "python": "3.12.14",
+  "device": "cpu",
+  "torch_threads": 2,
+  "model_load_seconds_including_imports": 13.13705083396053,
+  "index_seconds": 0.7516435830038972,
+  "indexed_passages": 20,
+  "dimensions": 384,
+  "max_tokens": 512,
+  "model_directory_bytes": 510385635,
+  "query_p50_ms": 38.38170849485323,
+  "query_p95_ms": 46.210562830674455,
+  "peak_rss_mib": 746.3125,
+  "ranking_10000_p95_ms": 1.874864540877751,
+  "vectors_10000_mib": 14.6484375,
+  "policy": {
+    "minimum_cosine": 0.84,
+    "minimum_top_two_margin": 0.015,
+    "returns_maximum": 1,
+    "calibration_fixture_sha256": "466d5b59dc697c549494a687c805bbf5195328bbae2dc7b1cdafe63f2cc7cd45",
+    "note": "Semantic-only feasibility baseline. Scores are not probabilities; no lexical search or contradiction classifier is implemented here."
+  },
+  "calibration": {
+    "correct_destinations": 17,
+    "answerable": 18,
+    "false_answers": 0,
+    "unanswerable": 12,
+    "abstained_answerable": 1,
+    "wrong_destinations": 0,
+    "cases": [
+      {
+        "question": "Qui peut m'envoyer une invitation pour rejoindre le portail ?",
+        "expected": "invite",
+        "category": "answerable",
+        "top": "invite",
+        "score": 0.8588119745254517,
+        "margin": 0.04083693027496338,
+        "returned": "invite",
+        "passed": true
+      },
+      {
+        "question": "J'ai perdu mon mot de passe, que dois-je faire ?",
+        "expected": "password",
+        "category": "answerable",
+        "top": "password",
+        "score": 0.8640298247337341,
+        "margin": 0.029060006141662598,
+        "returned": "password",
+        "passed": true
+      },
+      {
+        "question": "Un brouillon enregistré est-il immédiatement visible par l'équipe ?",
+        "expected": "draft",
+        "category": "answerable",
+        "top": "draft",
+        "score": 0.854651689529419,
+        "margin": 0.020578384399414062,
+        "returned": "draft",
+        "passed": true
+      },
+      {
+        "question": "Que faire des stories non terminées quand on clôture un sprint ?",
+        "expected": "carry",
+        "category": "answerable",
+        "top": "carry",
+        "score": 0.9072483777999878,
+        "margin": 0.059475839138031006,
+        "returned": "carry",
+        "passed": true
+      },
+      {
+        "question": "Puis-je récupérer le fichier exactement comme il a été importé ?",
+        "expected": "original",
+        "category": "answerable",
+        "top": "original",
+        "score": 0.8587515950202942,
+        "margin": 0.005815684795379639,
+        "returned": null,
+        "passed": false
+      },
+      {
+        "question": "Pourquoi mon aperçu affiche-t-il Résultat non disponible pour une formule ?",
+        "expected": "formula",
+        "category": "answerable",
+        "top": "formula",
+        "score": 0.878105103969574,
+        "margin": 0.021822094917297363,
+        "returned": "formula",
+        "passed": true
+      },
+      {
+        "question": "Les lecteurs peuvent-ils encore consulter un contenu archivé ?",
+        "expected": "archive",
+        "category": "answerable",
+        "top": "archive",
+        "score": 0.89670729637146,
+        "margin": 0.035394132137298584,
+        "returned": "archive",
+        "passed": true
+      },
+      {
+        "question": "Un epic peut-il couvrir deux applications différentes ?",
+        "expected": "epic",
+        "category": "answerable",
+        "top": "epic",
+        "score": 0.8989677429199219,
+        "margin": 0.06725496053695679,
+        "returned": "epic",
+        "passed": true
+      },
+      {
+        "question": "Comment insérer un tableau dans une spécification ?",
+        "expected": "editor",
+        "category": "answerable",
+        "top": "editor",
+        "score": 0.8430411219596863,
+        "margin": 0.039043545722961426,
+        "returned": "editor",
+        "passed": true
+      },
+      {
+        "question": "Avec un rôle utilisateur, puis-je modifier une user story ?",
+        "expected": "reader",
+        "category": "answerable",
+        "top": "reader",
+        "score": 0.8606959581375122,
+        "margin": 0.02080535888671875,
+        "returned": "reader",
+        "passed": true
+      },
+      {
+        "question": "À qui m'adresser lorsque le chatbot ne trouve aucune réponse ?",
+        "expected": "urbanists",
+        "category": "answerable",
+        "top": "urbanists",
+        "score": 0.8839126825332642,
+        "margin": 0.04184842109680176,
+        "returned": "urbanists",
+        "passed": true
+      },
+      {
+        "question": "Comment lire la deuxième page d'un PDF sur le portail ?",
+        "expected": "pages",
+        "category": "answerable",
+        "top": "pages",
+        "score": 0.8459420800209045,
+        "margin": 0.03606957197189331,
+        "returned": "pages",
+        "passed": true
+      },
+      {
+        "question": "Qui peut consulter les anciennes versions des specs ?",
+        "expected": "history",
+        "category": "answerable",
+        "top": "history",
+        "score": 0.864144504070282,
+        "margin": 0.05005925893783569,
+        "returned": "history",
+        "passed": true
+      },
+      {
+        "question": "Où retrouver les onglets masqués d'un classeur ?",
+        "expected": "hidden",
+        "category": "answerable",
+        "top": "hidden",
+        "score": 0.8704907298088074,
+        "margin": 0.04561781883239746,
+        "returned": "hidden",
+        "passed": true
+      },
+      {
+        "question": "Si l'aperçu du nouveau fichier échoue, que voient les lecteurs ?",
+        "expected": "failure",
+        "category": "answerable",
+        "top": "failure",
+        "score": 0.8719561100006104,
+        "margin": 0.016234517097473145,
+        "returned": "failure",
+        "passed": true
+      },
+      {
+        "question": "Peut-on avoir deux sprints actifs en même temps ?",
+        "expected": "one-sprint",
+        "category": "answerable",
+        "top": "one-sprint",
+        "score": 0.9111699461936951,
+        "margin": 0.07668507099151611,
+        "returned": "one-sprint",
+        "passed": true
+      },
+      {
+        "question": "Peut-on éditer directement un dessin draw.io dans le portail ?",
+        "expected": "drawio",
+        "category": "answerable",
+        "top": "drawio",
+        "score": 0.8681255578994751,
+        "margin": 0.043224215507507324,
+        "returned": "drawio",
+        "passed": true
+      },
+      {
+        "question": "Un sprint peut-il regrouper des stories de plusieurs applications ?",
+        "expected": "cross",
+        "category": "answerable",
+        "top": "cross",
+        "score": 0.9177807569503784,
+        "margin": 0.06370025873184204,
+        "returned": "cross",
+        "passed": true
+      },
+      {
+        "question": "Quel temps fera-t-il demain à Lyon ?",
+        "expected": null,
+        "category": "unknown",
+        "top": "urbanists",
+        "score": 0.7631744146347046,
+        "margin": 0.001702427864074707,
+        "returned": null,
+        "passed": true
+      },
+      {
+        "question": "Quel restaurant choisir ce soir ?",
+        "expected": null,
+        "category": "unknown",
+        "top": "urbanists",
+        "score": 0.8165676593780518,
+        "margin": 0.018285751342773438,
+        "returned": null,
+        "passed": true
+      },
+      {
+        "question": "Quel est le budget annuel du projet ?",
+        "expected": null,
+        "category": "unknown",
+        "top": "urbanists",
+        "score": 0.8128332495689392,
+        "margin": 0.02444547414779663,
+        "returned": null,
+        "passed": true
+      },
+      {
+        "question": "Quelle est l'adresse SMTP de l'hébergement ?",
+        "expected": null,
+        "category": "unknown",
+        "top": "urbanists",
+        "score": 0.8268786668777466,
+        "margin": 0.0019913911819458008,
+        "returned": null,
+        "passed": true
+      },
+      {
+        "question": "Quelle formule calcule la taxe sur les billets ?",
+        "expected": null,
+        "category": "keyword_overlap",
+        "top": "urbanists",
+        "score": 0.8041421175003052,
+        "margin": 0.006279110908508301,
+        "returned": null,
+        "passed": true
+      },
+      {
+        "question": "Quel epic couvre le remboursement des billets ?",
+        "expected": null,
+        "category": "keyword_overlap",
+        "top": "epic",
+        "score": 0.8164966106414795,
+        "margin": 0.00765681266784668,
+        "returned": null,
+        "passed": true
+      },
+      {
+        "question": "Combien de jours dure notre prochain sprint ?",
+        "expected": null,
+        "category": "keyword_overlap",
+        "top": "one-sprint",
+        "score": 0.8329800367355347,
+        "margin": 0.016397535800933838,
+        "returned": null,
+        "passed": true
+      },
+      {
+        "question": "Quel est le délai de suppression des comptes DEMO ?",
+        "expected": null,
+        "category": "conflict",
+        "top": "conflict-a",
+        "score": 0.8883718848228455,
+        "margin": 0.00913017988204956,
+        "returned": null,
+        "passed": true
+      },
+      {
+        "question": "Les comptes DEMO doivent-ils être supprimés au bout de trente jours ?",
+        "expected": null,
+        "category": "conflict",
+        "top": "conflict-a",
+        "score": 0.9306321740150452,
+        "margin": 0.006770491600036621,
+        "returned": null,
+        "passed": true
+      },
+      {
+        "question": "Quel est le code de secours DEMO-DRAFT ?",
+        "expected": null,
+        "category": "draft_only",
+        "top": "conflict-a",
+        "score": 0.8277091979980469,
+        "margin": 0.0038421154022216797,
+        "returned": null,
+        "passed": true
+      },
+      {
+        "question": "Quel est le mot de contrôle DEMO-ARCHIVE ?",
+        "expected": null,
+        "category": "archived_only",
+        "top": "conflict-a",
+        "score": 0.8416848182678223,
+        "margin": 0.0038640499114990234,
+        "returned": null,
+        "passed": true
+      },
+      {
+        "question": "Quel est le montant de la facture DEMO-FILE ?",
+        "expected": null,
+        "category": "file_only",
+        "top": "conflict-a",
+        "score": 0.8385264873504639,
+        "margin": 0.0030241012573242188,
+        "returned": null,
+        "passed": true
+      }
+    ]
+  },
+  "held_out": {
+    "correct_destinations": 6,
+    "answerable": 18,
+    "false_answers": 0,
+    "unanswerable": 12,
+    "abstained_answerable": 11,
+    "wrong_destinations": 1,
+    "cases": [
+      {
+        "question": "Je rejoins l'équipe : comment ouvrir mon accès au site ?",
+        "expected": "invite",
+        "category": "answerable",
+        "top": "invite",
+        "score": 0.8407328128814697,
+        "margin": 0.003441929817199707,
+        "returned": null,
+        "passed": false
+      },
+      {
+        "question": "Je ne me souviens plus de mon secret de connexion : comment le remplacer ?",
+        "expected": "password",
+        "category": "answerable",
+        "top": "password",
+        "score": 0.8309472799301147,
+        "margin": 0.026719093322753906,
+        "returned": null,
+        "passed": false
+      },
+      {
+        "question": "J'ai sauvegardé une correction, pourquoi les membres voient-ils encore l'ancien texte ?",
+        "expected": "draft",
+        "category": "answerable",
+        "top": "history",
+        "score": 0.8450630903244019,
+        "margin": 0.02371227741241455,
+        "returned": "history",
+        "passed": false
+      },
+      {
+        "question": "Une tâche reste en cours à la fin de l'itération : où la placer ?",
+        "expected": "carry",
+        "category": "answerable",
+        "top": "carry",
+        "score": 0.8324851989746094,
+        "margin": 0.003509044647216797,
+        "returned": null,
+        "passed": false
+      },
+      {
+        "question": "Le téléchargement conserve-t-il le document source intact ?",
+        "expected": "original",
+        "category": "answerable",
+        "top": "original",
+        "score": 0.8608289361000061,
+        "margin": 0.013014495372772217,
+        "returned": null,
+        "passed": false
+      },
+      {
+        "question": "Comment faire apparaître le total calculé manquant dans le classeur importé ?",
+        "expected": "formula",
+        "category": "answerable",
+        "top": "formula",
+        "score": 0.8696156144142151,
+        "margin": 0.035547852516174316,
+        "returned": "formula",
+        "passed": true
+      },
+      {
+        "question": "Que devient une page dans la recherche quand un admin l'archive ?",
+        "expected": "archive",
+        "category": "answerable",
+        "top": "archive",
+        "score": 0.864916205406189,
+        "margin": 0.011518716812133789,
+        "returned": null,
+        "passed": false
+      },
+      {
+        "question": "Peut-on rattacher un même besoin majeur à plusieurs applications ?",
+        "expected": "epic",
+        "category": "answerable",
+        "top": "cross",
+        "score": 0.8507859706878662,
+        "margin": 0.0031058192253112793,
+        "returned": null,
+        "passed": false
+      },
+      {
+        "question": "Quel outil permet de structurer une page de spec avec titres et code ?",
+        "expected": "editor",
+        "category": "answerable",
+        "top": "editor",
+        "score": 0.8689907789230347,
+        "margin": 0.05175691843032837,
+        "returned": "editor",
+        "passed": true
+      },
+      {
+        "question": "Mon compte de lecteur permet-il de créer un epic ?",
+        "expected": "reader",
+        "category": "answerable",
+        "top": "reader",
+        "score": 0.8421760201454163,
+        "margin": 0.0006175637245178223,
+        "returned": null,
+        "passed": false
+      },
+      {
+        "question": "Que m'indique l'assistant lorsqu'il n'a pas de réponse dans les pages ?",
+        "expected": "urbanists",
+        "category": "answerable",
+        "top": "urbanists",
+        "score": 0.8553069233894348,
+        "margin": 0.011102914810180664,
+        "returned": null,
+        "passed": false
+      },
+      {
+        "question": "Peut-on parcourir toutes les pages d'un diagramme PDF dans le site ?",
+        "expected": "pages",
+        "category": "answerable",
+        "top": "pages",
+        "score": 0.8781776428222656,
+        "margin": 0.04352593421936035,
+        "returned": "pages",
+        "passed": true
+      },
+      {
+        "question": "Comment un admin reprend-il une ancienne version sans la publier immédiatement ?",
+        "expected": "history",
+        "category": "answerable",
+        "top": "history",
+        "score": 0.8978657722473145,
+        "margin": 0.03103393316268921,
+        "returned": "history",
+        "passed": true
+      },
+      {
+        "question": "Une feuille cachée dans Excel est-elle consultable sur le site ?",
+        "expected": "hidden",
+        "category": "answerable",
+        "top": "hidden",
+        "score": 0.8614922761917114,
+        "margin": 0.0134199857711792,
+        "returned": null,
+        "passed": false
+      },
+      {
+        "question": "L'ancien document reste-t-il lisible quand son remplacement est invalide ?",
+        "expected": "failure",
+        "category": "answerable",
+        "top": "failure",
+        "score": 0.8699015378952026,
+        "margin": 0.030324220657348633,
+        "returned": "failure",
+        "passed": true
+      },
+      {
+        "question": "Combien d'itérations peut-on démarrer simultanément dans le projet ?",
+        "expected": "one-sprint",
+        "category": "answerable",
+        "top": "one-sprint",
+        "score": 0.8372301459312439,
+        "margin": 0.019090116024017334,
+        "returned": null,
+        "passed": false
+      },
+      {
+        "question": "Faut-il retourner dans draw.io pour modifier le diagramme importé ?",
+        "expected": "drawio",
+        "category": "answerable",
+        "top": "drawio",
+        "score": 0.8991118669509888,
+        "margin": 0.05456489324569702,
+        "returned": "drawio",
+        "passed": true
+      },
+      {
+        "question": "Comment voir les tâches d'une application dans une itération transverse ?",
+        "expected": "cross",
+        "category": "answerable",
+        "top": "epic",
+        "score": 0.8435729146003723,
+        "margin": 0.003102421760559082,
+        "returned": null,
+        "passed": false
+      },
+      {
+        "question": "Va-t-il pleuvoir à Paris demain ?",
+        "expected": null,
+        "category": "unknown",
+        "top": "urbanists",
+        "score": 0.8205075860023499,
+        "margin": 0.033650338649749756,
+        "returned": null,
+        "passed": true
+      },
+      {
+        "question": "Où réserver un repas pour vendredi ?",
+        "expected": null,
+        "category": "unknown",
+        "top": "urbanists",
+        "score": 0.8240894675254822,
+        "margin": 0.0060691237449646,
+        "returned": null,
+        "passed": true
+      },
+      {
+        "question": "Combien coûte le projet UBSI cette année ?",
+        "expected": null,
+        "category": "unknown",
+        "top": "urbanists",
+        "score": 0.808963418006897,
+        "margin": 0.019472718238830566,
+        "returned": null,
+        "passed": true
+      },
+      {
+        "question": "Quel serveur de messagerie doit-on configurer ?",
+        "expected": null,
+        "category": "unknown",
+        "top": "invite",
+        "score": 0.8165417909622192,
+        "margin": 0.005028367042541504,
+        "returned": null,
+        "passed": true
+      },
+      {
+        "question": "Quel taux de TVA utiliser dans mon tableau Excel ?",
+        "expected": null,
+        "category": "keyword_overlap",
+        "top": "formula",
+        "score": 0.8211279511451721,
+        "margin": 0.02253812551498413,
+        "returned": null,
+        "passed": true
+      },
+      {
+        "question": "Quelle story détaille les bagages perdus ?",
+        "expected": null,
+        "category": "keyword_overlap",
+        "top": "archive",
+        "score": 0.7800360918045044,
+        "margin": 0.002808094024658203,
+        "returned": null,
+        "passed": true
+      },
+      {
+        "question": "Quelle est la date du prochain démarrage de sprint ?",
+        "expected": null,
+        "category": "keyword_overlap",
+        "top": "one-sprint",
+        "score": 0.8248963952064514,
+        "margin": 0.021906912326812744,
+        "returned": null,
+        "passed": true
+      },
+      {
+        "question": "Après combien de jours efface-t-on les comptes DEMO ?",
+        "expected": null,
+        "category": "conflict",
+        "top": "conflict-a",
+        "score": 0.8895244002342224,
+        "margin": 0.007705390453338623,
+        "returned": null,
+        "passed": true
+      },
+      {
+        "question": "Est-il interdit d'effacer les comptes DEMO après trente jours ?",
+        "expected": null,
+        "category": "conflict",
+        "top": "conflict-b",
+        "score": 0.918365478515625,
+        "margin": 0.0018631815910339355,
+        "returned": null,
+        "passed": true
+      },
+      {
+        "question": "Où trouver le code de secours du brouillon DEMO-DRAFT ?",
+        "expected": null,
+        "category": "draft_only",
+        "top": "conflict-a",
+        "score": 0.826339840888977,
+        "margin": 0.0006400346755981445,
+        "returned": null,
+        "passed": true
+      },
+      {
+        "question": "Quel mot de contrôle était dans DEMO-ARCHIVE ?",
+        "expected": null,
+        "category": "archived_only",
+        "top": "conflict-a",
+        "score": 0.8259022235870361,
+        "margin": 0.0036362409591674805,
+        "returned": null,
+        "passed": true
+      },
+      {
+        "question": "Combien indique la facture importée DEMO-FILE ?",
+        "expected": null,
+        "category": "file_only",
+        "top": "conflict-a",
+        "score": 0.8282626867294312,
+        "margin": 0.003467082977294922,
+        "returned": null,
+        "passed": true
+      }
+    ]
+  },
+  "source_gate": {
+    "ineligible_excluded": 4,
+    "post_ranking_recheck_passed": true
+  },
+  "acceptance_target_met": false
+}

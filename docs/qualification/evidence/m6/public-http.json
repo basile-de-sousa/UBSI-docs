@@ -1,0 +1,44 @@
+[
+  {
+    "path": "/health/live/",
+    "status": 200,
+    "location": null,
+    "cache_control": "no-store, private"
+  },
+  {
+    "path": "/health/ready/",
+    "status": 200,
+    "location": null,
+    "cache_control": "no-store, private"
+  },
+  {
+    "path": "/search/",
+    "status": 302,
+    "location": "/auth/login/",
+    "cache_control": "no-store, private"
+  },
+  {
+    "path": "/assistant/",
+    "status": 302,
+    "location": "/auth/login/",
+    "cache_control": "no-store, private"
+  },
+  {
+    "path": "/admin/search/",
+    "status": 302,
+    "location": "/auth/login/",
+    "cache_control": "no-store, private"
+  },
+  {
+    "path": "/assistant/query/",
+    "status": 401,
+    "location": null,
+    "cache_control": "no-store, private"
+  },
+  {
+    "path": "/admin/search/preview/",
+    "status": 401,
+    "location": null,
+    "cache_control": "no-store, private"
+  }
+]

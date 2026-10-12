@@ -1,5 +1,7 @@
 # ADR-002: Share versioned documents through GitHub Releases, no website
-Status: accepted - Date: 2026-10-08
+Status: partially superseded by ADR-003 (no-website policy only) - Date: 2026-10-08
+
+The project owner decided on 2026-10-11 to build a private knowledge portal. See [ADR-003](003-project-knowledge-portal.md). Existing Release distribution is not removed by that decision.
 
 ## Context
 

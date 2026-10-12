@@ -1,0 +1,3 @@
+{% extends 'base.html' %}
+{% block title %}{{ error_title }}{% endblock %}
+{% block body %}<main id="main" class="error-page"><p class="eyebrow">PORTAIL UBSI</p><h1>{{ error_title }}</h1><p>{{ error_message }}</p><a class="button button-primary" href="{% url 'entry' %}">Revenir à l’accueil</a></main>{% endblock %}

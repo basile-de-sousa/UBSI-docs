@@ -1,0 +1,44 @@
+[
+  {
+    "path": "/health/live/",
+    "status": 200,
+    "location": null,
+    "cache_control": "no-store, private",
+    "csp": "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'; form-action 'self'"
+  },
+  {
+    "path": "/health/ready/",
+    "status": 200,
+    "location": null,
+    "cache_control": "no-store, private",
+    "csp": "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'; form-action 'self'"
+  },
+  {
+    "path": "/epics/",
+    "status": 302,
+    "location": "/auth/login/",
+    "cache_control": "no-store, private",
+    "csp": "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'; form-action 'self'"
+  },
+  {
+    "path": "/stories/",
+    "status": 302,
+    "location": "/auth/login/",
+    "cache_control": "no-store, private",
+    "csp": "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'; form-action 'self'"
+  },
+  {
+    "path": "/sprints/",
+    "status": 302,
+    "location": "/auth/login/",
+    "cache_control": "no-store, private",
+    "csp": "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'; form-action 'self'"
+  },
+  {
+    "path": "/admin/knowledge/",
+    "status": 302,
+    "location": "/auth/login/",
+    "cache_control": "no-store, private",
+    "csp": "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'; form-action 'self'"
+  }
+]

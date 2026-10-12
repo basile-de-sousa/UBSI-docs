@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-12",
+  "environment": "ubsi-portal-m2-preview",
+  "method": "Manual browser observations through the supported browser API; no automated domain suite.",
+  "observations": [
+    {
+      "area": "authoring",
+      "result": "Published one cross-application epic, two sprints and three structured stories with acceptance criteria and member attribution."
+    },
+    {
+      "area": "cycle",
+      "result": "US-002 depends on US-001. Publishing US-001 depending on US-002 was refused; correction preserved the draft and succeeded."
+    },
+    {
+      "area": "parent applications",
+      "result": "Epic removal of PLA was refused while US-002 still required it; correcting and publishing succeeded."
+    },
+    {
+      "area": "activation",
+      "result": "Sprint 1 activation first refused because US-001 lacked a published responsible member; adding/publishing the member enabled activation. Sprint 2 activation then refused while Sprint 1 was active."
+    },
+    {
+      "area": "closure draft",
+      "result": "Closure with US-002 draft refused. Publishing the draft made the prior closure balance stale; selected decisions remained visible."
+    },
+    {
+      "area": "closure",
+      "result": "US-001 carried into planned Sprint 2 with in_progress preserved; US-002 returned to backlog with assignment cleared; finished US-003 assignment cleared. Repeating from another tab returned the existing closed result."
+    },
+    {
+      "area": "snapshot stability",
+      "result": "US-001 later renamed/completed in active Sprint 2; Sprint 1 kept its old title/in_progress state. US-002 snapshot ready remained unchanged while its current revision became backlog."
+    },
+    {
+      "area": "withdrawal",
+      "result": "Archived US-003 becomes an unavailable reader row; admin history retains all three original rows."
+    },
+    {
+      "area": "closed state",
+      "result": "Restoration of the old planned Sprint 1 revision refused; closed state/snapshot unchanged."
+    },
+    {
+      "area": "reader",
+      "result": "Assigned responsible member remains user; no admin controls and direct closure/history requests denied."
+    },
+    {
+      "area": "filters",
+      "result": "Epic+backlog story list returned US-002. PLA snapshot filter returned only visible US-002. Epic detail showed current Sprint 2 and historical Sprint 1."
+    },
+    {
+      "area": "responsive",
+      "result": "Closed reader page, active home and new-story form matched viewport/document width 390. Desktop closed page captured at 1280. A keyboard Right input moved table scrollLeft from 0 to 40 while document width remained 390. Mobile menu navigation worked."
+    },
+    {
+      "area": "console",
+      "result": "Final warning/error capture empty."
+    }
+  ],
+  "limits": [
+    "Activation refusal was sequential, not a simultaneous transaction race/load exercise.",
+    "No 30-minute expiry boundary or full size/assistive-technology matrix exercised.",
+    "No direct SQL corruption attempt or exhaustive closed-sprint archive/republication cycle.",
+    "No file adapter, semantic worker or chatbot shipped in M4."
+  ]
+}
