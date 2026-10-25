@@ -2,10 +2,6 @@
 
 Documents versionnés du projet UBSI (SI de la compagnie AirSIGL, EPITA SIGL).
 
-**Tous les liens utiles : [portail UBSI](https://basile-de-sousa.github.io/UBSI-docs/)** (page provisoire tenue par les urbanistes, en attendant le portail privé).
-
-Pour ajouter ou retirer un lien : modifiez [`site/liens.yml`](site/liens.yml) sur GitHub (crayon *Edit*), commitez sur `main`. La page est republiée en 1 à 2 minutes ; si le fichier est mal formé, la publication échoue et l'ancienne page reste en ligne. Voir [SPEC-002](docs/specs/SPEC-002-interim-link-portal.md).
-
 ## Portail UBSI — spécifications et plan d'implémentation
 
 Le projet prépare un site privé pour consulter les applications, epics, user stories, sprints, spécifications, schémas, fichiers Excel et FAQ, avec une administration des contenus et un chatbot d'orientation.
@@ -57,8 +53,7 @@ Un nouveau CSV dans `data/` donne automatiquement son propre `.xlsx` et un ongle
 data/      Référentiels en CSV (source de vérité, convertis en Excel à chaque publication)
 files/     Autres documents : PDF, Word, PowerPoint, images...
 docs/      Specs, plan, ADR, guides, architecture et rapports de qualification
-scripts/   Conversion CSV → Excel, construction du portail de liens
-site/      Portail de liens provisoire (liens.yml + page)
+scripts/   Conversion CSV → Excel
 portal/    Portail privé Django/PostgreSQL (démarrage dans portal/README.md)
 ```
 
