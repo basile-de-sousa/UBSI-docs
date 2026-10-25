@@ -30,6 +30,7 @@ Les ADR sont rédigés en anglais. Les ADR-005 à ADR-009 consignent les choix r
 | [007](adr/007-private-documents-and-durable-jobs.md) | Originaux privés, aperçus bornés et jobs avec baux | Accepté pour l’implémentation |
 | [008](adr/008-grounded-retrieval-and-qualification-gate.md) | Réponses extraites des publications et activation conditionnée à une qualification | Accepté pour le mécanisme ; candidat non qualifié |
 | [009](adr/009-deployment-backup-and-operational-acceptance.md) | Proxy explicite, sauvegardes cohérentes et restauration isolée | Accepté pour la préparation ; hébergement à qualifier |
+| [010](adr/010-interim-link-portal.md) | Portail de liens public provisoire sur GitHub Pages (SPEC-002) | Accepté |
 
 ## Réalisations et preuves
 

@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portail UBSI</title>
+<meta name="description" content="Liens vers les documents du projet UBSI, tenus par les urbanistes.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231f4e8c'/><path d='M7 20 L25 11 L19 21 L15 18 Z' fill='white'/></svg>">
+<style>
+:root {
+  --bg: #f6f7f9; --surface: #ffffff; --text: #17202b; --muted: #5d6b7a;
+  --border: #dfe4ea; --accent: #1f4e8c; --accent-soft: #e6eef8;
+  --draft: #8a5a00; --draft-bg: #fff4dc; --old: #8a2d2d; --old-bg: #fbe9e9;
+  --soon: #7a8794;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11161c; --surface: #19212a; --text: #e5eaf0; --muted: #98a5b3;
+    --border: #2a3542; --accent: #7fb0ec; --accent-soft: #1d2d42;
+    --draft: #f0c060; --draft-bg: #3a2e14; --old: #f09a9a; --old-bg: #3a1d1d;
+    --soon: #6f7c89;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+.wrap { max-width: 920px; margin: 0 auto; padding: 32px 16px 64px; }
+header h1 { margin: 0; font-size: 1.7rem; letter-spacing: -0.01em; }
+header p { margin: 4px 0 0; color: var(--muted); }
+.annonce { margin: 20px 0 0; padding: 10px 14px; border-left: 3px solid var(--accent);
+  background: var(--accent-soft); border-radius: 6px; font-size: 0.95rem; }
+.controls { position: sticky; top: 0; z-index: 2; background: var(--bg);
+  padding: 16px 0 12px; margin-top: 12px; display: grid; gap: 10px; }
+input[type=search] { width: 100%; padding: 10px 12px; font: inherit; color: var(--text);
+  background: var(--surface); border: 1px solid var(--border); border-radius: 8px; }
+input[type=search]:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font: inherit; font-size: 0.85rem; padding: 4px 11px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text); }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+section { margin-top: 28px; }
+section h2 { font-size: 1.05rem; margin: 0; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
+section > p { margin: 2px 0 0; color: var(--muted); font-size: 0.9rem; }
+ul { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 8px; }
+li { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; }
+li a.name { color: var(--accent); font-weight: 600; text-decoration: none; overflow-wrap: anywhere; }
+li a.name:hover { text-decoration: underline; }
+li .name.soon { color: var(--soon); font-weight: 600; }
+li .desc { margin: 2px 0 0; color: var(--muted); font-size: 0.92rem; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; font-size: 0.78rem; }
+.tag { padding: 1px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--text); }
+.tag.brouillon { background: var(--draft-bg); color: var(--draft); }
+.tag.obsolete { background: var(--old-bg); color: var(--old); }
+.tag.soon { background: transparent; border: 1px dashed var(--soon); color: var(--soon); }
+.empty, footer { color: var(--muted); font-size: 0.9rem; }
+footer { margin-top: 40px; }
+footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Portail UBSI</h1>
+    <p>Tous les documents du projet AirSIGL, au même endroit.</p>
+    <div class="annonce" id="annonce" hidden></div>
+  </header>
+  <div class="controls">
+    <input type="search" id="q" placeholder="Rechercher un document…" aria-label="Rechercher un document">
+    <div class="chips" id="chips" role="group" aria-label="Filtrer par équipe"></div>
+  </div>
+  <main id="list"><p class="empty">Chargement…</p></main>
+  <footer id="foot"></footer>
+</div>
+<script>
+(function () {
+  var state = { team: "", q: "" }, data = null;
+  try { state.team = localStorage.getItem("ubsi-team") || ""; } catch (e) {}
+
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text) n.textContent = text;
+    return n;
+  }
+  function norm(s) { return (s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase(); }
+
+  function chips() {
+    var box = document.getElementById("chips"); box.textContent = "";
+    var entries = [["", "Toutes les équipes"]].concat(Object.entries(data.equipes));
+    entries.forEach(function (e) {
+      var b = el("button", "chip", e[1]);
+      b.type = "button";
+      b.setAttribute("aria-pressed", String(state.team === e[0]));
+      b.onclick = function () {
+        state.team = e[0];
+        try { localStorage.setItem("ubsi-team", state.team); } catch (err) {}
+        chips(); render();
+      };
+      box.appendChild(b);
+    });
+  }
+
+  function render() {
+    var main = document.getElementById("list"); main.textContent = "";
+    var q = norm(state.q), shown = 0;
+    data.sections.forEach(function (s) {
+      var links = s.liens.filter(function (l) {
+        if (state.team && l.equipes.length && l.equipes.indexOf(state.team) < 0) return false;
+        return !q || norm(l.nom + " " + l.description + " " + s.titre).indexOf(q) >= 0;
+      });
+      if (!links.length) return;
+      var sec = el("section"); sec.appendChild(el("h2", "", s.titre));
+      if (s.description) sec.appendChild(el("p", "", s.description));
+      var ul = el("ul");
+      links.forEach(function (l) {
+        var li = el("li");
+        if (l.url) {
+          var a = el("a", "name", l.nom);
+          a.href = l.url; a.target = "_blank"; a.rel = "noopener";
+          li.appendChild(a);
+        } else {
+          li.appendChild(el("span", "name soon", l.nom));
+        }
+        if (l.description) li.appendChild(el("p", "desc", l.description));
+        var meta = el("div", "meta");
+        if (!l.url) meta.appendChild(el("span", "tag soon", "à venir"));
+        if (l.statut === "brouillon") meta.appendChild(el("span", "tag brouillon", "brouillon"));
+        if (l.statut === "obsolete") meta.appendChild(el("span", "tag obsolete", "obsolète"));
+        l.equipes.forEach(function (c) { meta.appendChild(el("span", "tag", data.equipes[c] || c)); });
+        if (l.maj) meta.appendChild(el("span", "tag", "mis à jour le " + new Date(l.maj).toLocaleDateString("fr-FR")));
+        if (meta.childNodes.length) li.appendChild(meta);
+        ul.appendChild(li); shown++;
+      });
+      sec.appendChild(ul); main.appendChild(sec);
+    });
+    if (!shown) main.appendChild(el("p", "empty", "Aucun document ne correspond."));
+  }
+
+  fetch("liens.json", { cache: "no-cache" }).then(function (r) { return r.json(); }).then(function (d) {
+    data = d;
+    if (!data.equipes[state.team]) state.team = "";
+    if (d.annonce) { var a = document.getElementById("annonce"); a.textContent = d.annonce; a.hidden = false; }
+    var foot = document.getElementById("foot");
+    foot.appendChild(document.createTextNode("Tenu par les urbanistes · publié le " +
+      new Date(d.publie).toLocaleString("fr-FR", { dateStyle: "long", timeStyle: "short" }) + " · "));
+    var src = el("a", "", "modifier les liens");
+    src.href = "https://github.com/basile-de-sousa/UBSI-docs/blob/main/site/liens.yml";
+    foot.appendChild(src);
+    chips(); render();
+  }).catch(function () {
+    document.getElementById("list").textContent = "Impossible de charger les liens. Réessayez dans un instant.";
+  });
+  document.getElementById("q").addEventListener("input", function (e) { state.q = e.target.value; render(); });
+})();
+</script>
+</body>
+</html>
